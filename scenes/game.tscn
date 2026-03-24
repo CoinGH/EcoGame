@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://hju0htjwh5o5"]
+
+[ext_resource type="Script" uid="uid://dvpo5pr1l7wrw" path="res://scripts/game.gd" id="1_p57ef"]
+[ext_resource type="Texture2D" uid="uid://tj4fypgo2t5" path="res://resources/placeholder.png" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://daa645er8e4" path="res://scripts/character_body_2d.gd" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://b63uhbex6jo4d" path="res://scripts/pause_menu.gd" id="3_lnu2h"]
+[ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://Godot-Fontpack/fonts/connection_ii/ConnectionII.otf" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://rnswpffip0vp" path="res://resources/ph_0.png" id="5_iywne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(100, 127)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.98984355, 5.4869056e-06, 9.62615e-07, 1)
+
+[node name="Game" type="Node2D" unique_id=80532876]
+script = ExtResource("1_p57ef")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2132875425]
+position = Vector2(54, 67.5)
+script = ExtResource("1_yqjtg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1844490196]
+position = Vector2(51, 6.5)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=2114287714]
+position = Vector2(1, 1.0000001)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_uwrxv")
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1195990997]
+process_mode = 3
+visible = false
+script = ExtResource("3_lnu2h")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1173670535]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5686275)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PauseMenu" unique_id=900646567]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="PauseMenu/VBoxContainer2" unique_id=903865820]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 78
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="PauseMenu/VBoxContainer2" unique_id=30893742]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 64
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer2" unique_id=871046286]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 48
+text = "Pause Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=496686332]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -50.5
+offset_right = 48.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonResume" type="Button" parent="PauseMenu/VBoxContainer" unique_id=447766002]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+
+[node name="ButtonQuit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=237266358]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[node name="ButtonExit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=536254500]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[node name="Inventory" type="CanvasLayer" parent="." unique_id=1373696104]
+visible = false
+
+[node name="TestObj" type="ColorRect" parent="Inventory" unique_id=1926104775]
+offset_left = 455.0
+offset_top = 217.0
+offset_right = 685.0
+offset_bottom = 429.0
+color = Color(0.7294118, 0.27058825, 1, 1)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1475209404]
+
+[node name="Money" type="Label" parent="HUD" unique_id=413740936]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
+theme_override_font_sizes/font_size = 32
+text = "1488 $"
+
+[node name="HP" type="ProgressBar" parent="HUD" unique_id=822147960]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -37.0
+offset_right = 219.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+step = 0.1
+value = 100.0
+
+[node name="Table_Test" type="Sprite2D" parent="." unique_id=553905661]
+position = Vector2(980, 530)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_iywne")
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonResume" to="PauseMenu" method="_on_button_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonQuit" to="PauseMenu" method="_on_button_quit_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonExit" to="PauseMenu" method="_on_button_exit_pressed"]

@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://bwu1u3wjkcyv8"]
+
+[ext_resource type="Script" uid="uid://doq62cu5a22sa" path="res://scripts/options.gd" id="1_yjkok"]
+[ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://Godot-Fontpack/fonts/connection_ii/ConnectionII.otf" id="2_2iy26"]
+
+[node name="Options" type="Control" unique_id=168706576]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjkok")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1568418722]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.6745098, 0.8509804, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1950639025]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer2" unique_id=141917838]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=208415292]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 64
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=122214126]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1971378417]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1946024035]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=318213843]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 19
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer" unique_id=1638799555]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+step = 0.5
+value = 100.0
+scrollable = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1600303543]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=367776634]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 19
+text = "V-Sync"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer2" unique_id=1402786467]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=741730078]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1487219696]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 19
+text = "Fullscreen"
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer3" unique_id=1841804675]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=723955820]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=194699080]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_font_sizes/font_size = 19
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer4" unique_id=996711522]
+clip_contents = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2iy26")
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Ukrainian"
+popup/item_1/id = 1
+popup/item_1/disabled = true
+
+[node name="BackButton" type="Button" parent="." unique_id=270803898]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2iy26")
+text = "Back"
+
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer2/CheckButton" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer3/CheckButton" to="." method="_on_v_sync_toggled"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer4/OptionButton" to="." method="_on_language_item_selected"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
