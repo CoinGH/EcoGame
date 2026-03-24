@@ -8,8 +8,6 @@ var can_move: bool = true
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Inventory"):
 		_inventory()
-	if event.is_action_pressed("Interact"):
-		pass
 
 func _physics_process(_delta: float) -> void:
 	if not can_move:

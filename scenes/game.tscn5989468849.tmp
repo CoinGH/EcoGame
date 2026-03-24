@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://rnswpffip0vp" path="res://resources/ph_0.png" id="5_iywne"]
 [ext_resource type="Script" uid="uid://biooqmrbrc7rr" path="res://scripts/money.gd" id="6_0tnpc"]
 [ext_resource type="Script" uid="uid://csbvr2nogwb45" path="res://scripts/static_body_2d.gd" id="6_u5sy4"]
-[ext_resource type="Script" uid="uid://c6nh81yg5130b" path="res://scripts/hp.gd" id="7_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="8_gee14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
@@ -145,7 +144,7 @@ offset_bottom = 45.0
 grow_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
 theme_override_font_sizes/font_size = 32
-text = "0 $"
+text = "1488 $"
 script = ExtResource("6_0tnpc")
 
 [node name="HP" type="ProgressBar" parent="HUD" unique_id=822147960]
@@ -162,7 +161,6 @@ grow_vertical = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
 step = 0.1
 value = 100.0
-script = ExtResource("7_vtaks")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=607282781]
 position = Vector2(980, 530)

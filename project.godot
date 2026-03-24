@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://cy22ou1nevm0w"
+
 [display]
 
 mouse_cursor/custom_image="uid://bnkh68scx45sx"
