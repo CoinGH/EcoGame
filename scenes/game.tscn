@@ -10,12 +10,19 @@
 [ext_resource type="Script" uid="uid://csbvr2nogwb45" path="res://scripts/static_body_2d.gd" id="6_u5sy4"]
 [ext_resource type="Script" uid="uid://c6nh81yg5130b" path="res://scripts/hp.gd" id="7_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="8_gee14"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
-size = Vector2(100, 127)
+[ext_resource type="Script" uid="uid://dctfysesbeocs" path="res://scripts/inventory.gd" id="9_ir15t"]
+[ext_resource type="Texture2D" uid="uid://bqs4w6qlndecg" path="res://resources/ph_2.png" id="9_trtic"]
+[ext_resource type="Texture2D" uid="uid://delppue2vtpde" path="res://resources/bg_ph.png" id="11_kvpfn"]
+[ext_resource type="Script" uid="uid://onuiegyluw4k" path="res://scripts/item_body.gd" id="12_kvuet"]
+[ext_resource type="Texture2D" uid="uid://qb5h0mit0nmp" path="res://resources/ph_1.png" id="13_trtic"]
+[ext_resource type="Texture2D" uid="uid://cygbqgc3frw1p" path="res://resources/ph_3.png" id="16_ca42v"]
+[ext_resource type="Script" uid="uid://cedlwjlddqxnx" path="res://scripts/door_body.gd" id="16_rysoc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
 bg_color = Color(0.98984355, 5.4869056e-06, 9.62615e-07, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(99.75, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
 size = Vector2(403.3335, 400)
@@ -23,21 +30,256 @@ size = Vector2(403.3335, 400)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
 size = Vector2(413.33325, 400)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(80, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
+size = Vector2(166, 163)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
+size = Vector2(160, 240.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+size = Vector2(281, 344)
+
 [node name="Game" type="Node2D" unique_id=80532876]
 script = ExtResource("1_p57ef")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=64695344]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground" unique_id=1384896589]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_kvpfn")
+expand_mode = 1
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1475209404]
+
+[node name="ResScreen" type="ColorRect" parent="HUD" unique_id=1442665582]
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Money" type="Label" parent="HUD" unique_id=413740936]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
+theme_override_font_sizes/font_size = 32
+text = "0.0 $"
+horizontal_alignment = 1
+script = ExtResource("6_0tnpc")
+
+[node name="HP" type="ProgressBar" parent="HUD" unique_id=822147960]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -37.0
+offset_right = 219.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+step = 0.1
+value = 100.0
+script = ExtResource("7_vtaks")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2132875425]
 position = Vector2(54, 67.5)
 script = ExtResource("1_yqjtg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1844490196]
-position = Vector2(51, 6.5)
-shape = SubResource("RectangleShape2D_lnu2h")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=2114287714]
-position = Vector2(1, 1.0000001)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2114287714]
+position = Vector2(52.5, 7.5)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_uwrxv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1844490196]
+position = Vector2(52.875, 7.5)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="Inventory" type="CanvasLayer" parent="." unique_id=1373696104]
+visible = false
+script = ExtResource("9_ir15t")
+
+[node name="TestObj" type="ColorRect" parent="Inventory" unique_id=1926104775]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6958586, 0.5097221, 0, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Inventory" unique_id=1465632089]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Slot_0" type="TextureRect" parent="Inventory/GridContainer" unique_id=1586330833]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_1" type="TextureRect" parent="Inventory/GridContainer" unique_id=1414551546]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_2" type="TextureRect" parent="Inventory/GridContainer" unique_id=769411508]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_3" type="TextureRect" parent="Inventory/GridContainer" unique_id=901101394]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_4" type="TextureRect" parent="Inventory/GridContainer" unique_id=520050200]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_5" type="TextureRect" parent="Inventory/GridContainer" unique_id=176441340]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_6" type="TextureRect" parent="Inventory/GridContainer" unique_id=1272939524]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_7" type="TextureRect" parent="Inventory/GridContainer" unique_id=80003028]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_8" type="TextureRect" parent="Inventory/GridContainer" unique_id=2001649113]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_9" type="TextureRect" parent="Inventory/GridContainer" unique_id=1968545855]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_10" type="TextureRect" parent="Inventory/GridContainer" unique_id=588444818]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_11" type="TextureRect" parent="Inventory/GridContainer" unique_id=1290579906]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_12" type="TextureRect" parent="Inventory/GridContainer" unique_id=1553344883]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_13" type="TextureRect" parent="Inventory/GridContainer" unique_id=1096228983]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="Slot_14" type="TextureRect" parent="Inventory/GridContainer" unique_id=1580088006]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_trtic")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=607282781]
+position = Vector2(980, 530)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("6_u5sy4")
+
+[node name="Table_Test" type="Sprite2D" parent="StaticBody2D" unique_id=553905661]
+position = Vector2(191.66675, -170)
+texture = ExtResource("5_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2094257317]
+position = Vector2(191.66675, -170)
+shape = SubResource("RectangleShape2D_p57ef")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=712300045]
+
+[node name="Aura" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=210290881]
+position = Vector2(190, -170)
+scale = Vector2(1.7, 1.7)
+shape = SubResource("RectangleShape2D_gee14")
+
+[node name="KeyboardE" type="Sprite2D" parent="." unique_id=95386373]
+position = Vector2(1104, 368)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_gee14")
+
+[node name="ItemBody" type="StaticBody2D" parent="." unique_id=20113160]
+script = ExtResource("12_kvuet")
+item_name = "glass"
+
+[node name="Ph1" type="Sprite2D" parent="ItemBody" unique_id=1656110799]
+position = Vector2(699.99994, 198.00003)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_trtic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBody" unique_id=1896757910]
+position = Vector2(700, 198)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="Area2D" type="Area2D" parent="ItemBody" unique_id=90201327]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemBody/Area2D" unique_id=868358405]
+position = Vector2(701, 198)
+shape = SubResource("RectangleShape2D_ca42v")
+
+[node name="KeyboardE2" type="Sprite2D" parent="." unique_id=1257262556]
+position = Vector2(780, 198.99998)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("8_gee14")
 
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1195990997]
 process_mode = 3
@@ -124,73 +366,31 @@ theme_override_fonts/font = ExtResource("4_lbhrr")
 theme_override_font_sizes/font_size = 30
 text = "Exit"
 
-[node name="Inventory" type="CanvasLayer" parent="." unique_id=1373696104]
-visible = false
+[node name="DoorBody" type="StaticBody2D" parent="." unique_id=1784122906]
+script = ExtResource("16_rysoc")
+scene = "res://scenes/street.tscn"
 
-[node name="TestObj" type="ColorRect" parent="Inventory" unique_id=1926104775]
-offset_left = 455.0
-offset_top = 217.0
-offset_right = 685.0
-offset_bottom = 429.0
-color = Color(0.7294118, 0.27058825, 1, 1)
+[node name="Ph3" type="Sprite2D" parent="DoorBody" unique_id=1765495413]
+position = Vector2(80, 353)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_ca42v")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1475209404]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBody" unique_id=1391632610]
+position = Vector2(80, 352.75)
+shape = SubResource("RectangleShape2D_rysoc")
 
-[node name="Money" type="Label" parent="HUD" unique_id=413740936]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -100.0
-offset_bottom = 45.0
-grow_horizontal = 0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
-theme_override_font_sizes/font_size = 32
-text = "0 $"
-script = ExtResource("6_0tnpc")
+[node name="Area2D" type="Area2D" parent="DoorBody" unique_id=1485352967]
 
-[node name="HP" type="ProgressBar" parent="HUD" unique_id=822147960]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -219.0
-offset_top = -37.0
-offset_right = 219.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
-step = 0.1
-value = 100.0
-script = ExtResource("7_vtaks")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorBody/Area2D" unique_id=1070854494]
+position = Vector2(77.5, 353)
+shape = SubResource("RectangleShape2D_ssvqc")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=607282781]
-position = Vector2(980, 530)
-scale = Vector2(0.3, 0.3)
-script = ExtResource("6_u5sy4")
-
-[node name="Table_Test" type="Sprite2D" parent="StaticBody2D" unique_id=553905661]
-position = Vector2(191.66675, -170)
-texture = ExtResource("5_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2094257317]
-position = Vector2(191.66675, -170)
-shape = SubResource("RectangleShape2D_p57ef")
-
-[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=712300045]
-
-[node name="Aura" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=210290881]
-position = Vector2(190, -170)
-scale = Vector2(1.7, 1.7)
-shape = SubResource("RectangleShape2D_gee14")
-
-[node name="KeyboardE" type="Sprite2D" parent="." unique_id=95386373]
-position = Vector2(1104, 368)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_gee14")
-
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="ItemBody/Area2D" to="ItemBody" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ItemBody/Area2D" to="ItemBody" method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonResume" to="PauseMenu" method="_on_button_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonQuit" to="PauseMenu" method="_on_button_quit_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/ButtonExit" to="PauseMenu" method="_on_button_exit_pressed"]
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="DoorBody/Area2D" to="DoorBody" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="DoorBody/Area2D" to="DoorBody" method="_on_area_2d_body_exited"]

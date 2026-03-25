@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ds2tar1wxmw30"]
+
+[ext_resource type="Script" uid="uid://do5b8eidei013" path="res://scripts/game_over.gd" id="1_6bcno"]
+
+[node name="Win" type="Control" unique_id=1263140689]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bcno")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=906728049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=802978699]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -47.0
+offset_right = 180.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 64
+text = "Game Over"
+
+[node name="ButtonToMainMenu" type="Button" parent="." unique_id=1584507249]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -23.5
+offset_right = 261.0
+offset_bottom = 23.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+text = "Go Back"
+
+[node name="ButtonRestart" type="Button" parent="." unique_id=252083261]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -23.5
+offset_bottom = 23.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+text = "Ah shit, here we go again."
+
+[connection signal="pressed" from="ButtonToMainMenu" to="." method="_on_button_to_main_menu_pressed"]
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_button_restart_pressed"]
