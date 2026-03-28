@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cbu5ksnlrlfjv"]
+
+[ext_resource type="Script" uid="uid://dtsmi2ptvjl5i" path="res://scripts/main_menu.gd" id="1_xm7ak"]
+[ext_resource type="AudioStream" uid="uid://bxcipqer0mu41" path="res://sounds/sfx/kenney_ui_audio/click2.ogg" id="2_h03jd"]
+[ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://fonts/connection_ii/ConnectionII.otf" id="3_gbdx4"]
+[ext_resource type="Texture2D" uid="uid://c8ccm2hvqcqn0" path="res://UI/kenney_emotes-pack/PNG/Vector/Style 5/emote_cash.png" id="4_2mbt4"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="5_m1xxq"]
+
+[node name="Control" type="Control" unique_id=921013919]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xm7ak")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=315799615]
+stream = ExtResource("2_h03jd")
+volume_db = -10.0
+pitch_scale = 2.25
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=10521118]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.6205523e-06, 0.6755409, 0.85058737, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1451349059]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer2" unique_id=841045323]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("3_gbdx4")
+theme_override_font_sizes/font_size = 64
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=145298025]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("3_gbdx4")
+theme_override_font_sizes/font_size = 64
+text = " "
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=941660928]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer" unique_id=551947163]
+layout_mode = 2
+texture = ExtResource("4_2mbt4")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer2/HBoxContainer" unique_id=588456065]
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_fonts/font = ExtResource("3_gbdx4")
+theme_override_font_sizes/font_size = 128
+text = "EcoGame"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=713259236]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -125.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="VBoxContainer" unique_id=1660969081]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m1xxq")
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="ButtonSettings" type="Button" parent="VBoxContainer" unique_id=1545266662]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m1xxq")
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="ButtonExit" type="Button" parent="VBoxContainer" unique_id=2080722751]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m1xxq")
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=238042012]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("5_m1xxq")
+theme_override_font_sizes/normal_font_size = 20
+text = "© EcoGame 2026. All rights probably reserved."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1133521112]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -186.0
+offset_right = 375.0
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("5_m1xxq")
+theme_override_font_sizes/normal_font_size = 28
+text = " Controls:
+ E, F - Interact
+ Tab, I - Inventory
+ W,A,S,D or Arrows - Walk
+ Shift - Run"
+
+[connection signal="pressed" from="VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonSettings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]

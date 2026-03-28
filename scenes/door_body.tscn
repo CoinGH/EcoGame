@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c5hg7e40mc56h"]
 
 [ext_resource type="Script" uid="uid://cedlwjlddqxnx" path="res://scripts/door_body.gd" id="1_x1l38"]
-[ext_resource type="AudioStream" uid="uid://b5tulf3bhin5n" path="res://sounds/sfx/kenney_rpg-audio/Audio/doorOpen_2.ogg" id="2_gn3va"]
+[ext_resource type="AudioStream" uid="uid://b5tulf3bhin5n" path="res://sounds/sfx/kenney_rpg_audio/doorOpen_2.ogg" id="2_gn3va"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
-size = Vector2(160, 265.68066)
+size = Vector2(190.79944, 364.10867)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
-size = Vector2(198.6959, 546.6644)
+size = Vector2(266.0677, 592.60034)
 
 [node name="DoorBody" type="StaticBody2D" unique_id=164409045]
 scale = Vector2(0.6, 0.6)

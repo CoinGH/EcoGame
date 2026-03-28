@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bli5ceca6ovyr" path="res://scripts/checkpoint_for_sale.gd" id="1_70kyv"]
 [ext_resource type="Shader" uid="uid://htk7utvavvuu" path="res://shaders/checkpoint.gdshader" id="1_itbxq"]
 [ext_resource type="Shader" uid="uid://cki6vd2u4rnsw" path="res://shaders/checkpoint_pillar.gdshader" id="2_70kyv"]
-[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://Godot-Fontpack/fonts/montreal/Montreal-Bold.ttf" id="4_q7gai"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="4_q7gai"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ywqth"]
 shader = ExtResource("1_itbxq")

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://ds2tar1wxmw30"]
+
+[ext_resource type="Script" uid="uid://do5b8eidei013" path="res://scripts/game_over.gd" id="1_f3ok1"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="2_arb2v"]
+[ext_resource type="AudioStream" uid="uid://bxcipqer0mu41" path="res://sounds/sfx/kenney_ui_audio/click2.ogg" id="3_mlbc3"]
+[ext_resource type="FontFile" uid="uid://bjtyhd1n3mwav" path="res://fonts/montreal/Montreal-Regular.ttf" id="4_u7epp"]
+
+[node name="GameOver" type="Control" unique_id=1263140689]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f3ok1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=906728049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonToMainMenu" type="Button" parent="." unique_id=1584507249]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_right = 500.0
+offset_bottom = 37.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_arb2v")
+theme_override_font_sizes/font_size = 32
+text = "Go Back"
+
+[node name="ButtonRestart" type="Button" parent="." unique_id=252083261]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -37.5
+offset_bottom = 37.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_arb2v")
+theme_override_font_sizes/font_size = 32
+text = "Ah shit, here we go again."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=939199059]
+stream = ExtResource("3_mlbc3")
+volume_db = -10.0
+pitch_scale = 2.25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=483932426]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=802978699]
+custom_minimum_size = Vector2(440, 80)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 0.91764706)
+theme_override_fonts/normal_font = ExtResource("2_arb2v")
+theme_override_font_sizes/normal_font_size = 64
+text = "! Game Over !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer" unique_id=2146505155]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 1, 1, 0.4745098)
+theme_override_fonts/normal_font = ExtResource("4_u7epp")
+theme_override_font_sizes/normal_font_size = 48
+text = "- Please be careful on the roads!
+- Сross the road only at pedestrian crossings..."
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonToMainMenu" to="." method="_on_button_to_main_menu_pressed"]
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_button_restart_pressed"]

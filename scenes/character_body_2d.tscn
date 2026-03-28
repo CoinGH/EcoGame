@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://oec6h8gxjdmq"]
 
 [ext_resource type="Script" uid="uid://daa645er8e4" path="res://scripts/character_body_2d.gd" id="1_dn4c7"]
-[ext_resource type="Texture2D" uid="uid://dlps0jd6qbyft" path="res://resources/roguelikeChar_transparent.png" id="3_ws0vm"]
-[ext_resource type="AudioStream" uid="uid://bhm47bajnr6u4" path="res://sounds/sfx/kenney_rpg-audio/Audio/footstep02.ogg" id="4_4vejd"]
-[ext_resource type="AudioStream" uid="uid://bgpeychgc577u" path="res://sounds/sfx/kenney_ui-audio/Audio/rollover2.ogg" id="5_rhr3r"]
-[ext_resource type="AudioStream" uid="uid://byyr1vmj7uokb" path="res://sounds/sfx/kenney_rpg-audio/Audio/footstep00.ogg" id="5_ws0vm"]
+[ext_resource type="Texture2D" uid="uid://dlps0jd6qbyft" path="res://resources/tilemaps/roguelikeChar_transparent.png" id="3_ws0vm"]
+[ext_resource type="AudioStream" uid="uid://bhm47bajnr6u4" path="res://sounds/sfx/kenney_rpg_audio/footstep02.ogg" id="4_4vejd"]
+[ext_resource type="AudioStream" uid="uid://bgpeychgc577u" path="res://sounds/sfx/kenney_ui_audio/rollover2.ogg" id="5_rhr3r"]
+[ext_resource type="AudioStream" uid="uid://byyr1vmj7uokb" path="res://sounds/sfx/kenney_rpg_audio/footstep00.ogg" id="5_ws0vm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
 atlas = ExtResource("3_ws0vm")

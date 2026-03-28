@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjgpnyk4q6f1u"]
 
-[ext_resource type="Texture2D" uid="uid://rnswpffip0vp" path="res://resources/ph_0.png" id="1_lmxw4"]
+[ext_resource type="Texture2D" uid="uid://rnswpffip0vp" path="res://resources/other/ph_0.png" id="1_lmxw4"]
 [ext_resource type="Script" uid="uid://dn0pbbgnvemqn" path="res://scripts/table_body.gd" id="1_u6ugx"]
 [ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="3_gijen"]
 

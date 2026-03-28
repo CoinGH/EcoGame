@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://8yvq10h1l7pi"]
+
+[ext_resource type="Script" uid="uid://dctfysesbeocs" path="res://scripts/inventory.gd" id="1_53g1v"]
+[ext_resource type="Shader" uid="uid://byx52fl1ehps1" path="res://shaders/rgb.gdshader" id="2_yyk2a"]
+[ext_resource type="Texture2D" uid="uid://bqs4w6qlndecg" path="res://resources/items/ph_2.png" id="3_uae8j"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="4_s887n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_37s47"]
+shader = ExtResource("2_yyk2a")
+shader_parameter/speed = 1.0
+
+[node name="Inventory" type="CanvasLayer" unique_id=2029636377]
+visible = false
+script = ExtResource("1_53g1v")
+
+[node name="TestObj" type="ColorRect" parent="." unique_id=1170957133]
+material = SubResource("ShaderMaterial_37s47")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5882353, 0.4509804, 0.65882355, 1)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=835573480]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Slot_0" type="TextureRect" parent="GridContainer" unique_id=1183218309]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_1" type="TextureRect" parent="GridContainer" unique_id=2101924669]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_2" type="TextureRect" parent="GridContainer" unique_id=1236491086]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_3" type="TextureRect" parent="GridContainer" unique_id=1886817773]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_4" type="TextureRect" parent="GridContainer" unique_id=297408496]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_5" type="TextureRect" parent="GridContainer" unique_id=1858065161]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_6" type="TextureRect" parent="GridContainer" unique_id=1552163441]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_7" type="TextureRect" parent="GridContainer" unique_id=1806806828]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_8" type="TextureRect" parent="GridContainer" unique_id=1114186238]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_9" type="TextureRect" parent="GridContainer" unique_id=534875905]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_10" type="TextureRect" parent="GridContainer" unique_id=366789081]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_11" type="TextureRect" parent="GridContainer" unique_id=1836683398]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_12" type="TextureRect" parent="GridContainer" unique_id=1997739617]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_13" type="TextureRect" parent="GridContainer" unique_id=1985684737]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="Slot_14" type="TextureRect" parent="GridContainer" unique_id=120910488]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_uae8j")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=865326171]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.5
+offset_right = 300.5
+offset_bottom = 427.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("4_s887n")
+theme_override_font_sizes/normal_font_size = 48
+text = "
+
+
+Inventory
+"
+horizontal_alignment = 1
+vertical_alignment = 2
