@@ -33,8 +33,8 @@ func _on_button_pressed() -> void:
 		remove_item("plastic")
 		remove_item("plastic")
 		Global.add_item("handcrafted_game_console")
-		asp.play()
-		await asp.finished
+	asp.play()
+	await asp.finished
 
 
 func _on_button_2_pressed() -> void:
@@ -44,8 +44,8 @@ func _on_button_2_pressed() -> void:
 		remove_item("fruits")
 		remove_item("sugar")
 		Global.add_item("fruit_salad")
-		asp.play()
-		await asp.finished
+	asp.play()
+	await asp.finished
 
 
 func _on_button_3_pressed() -> void:
@@ -54,8 +54,8 @@ func _on_button_3_pressed() -> void:
 		remove_item("vegetables")
 		remove_item("salt")
 		Global.add_item("soup")
-		asp.play()
-		await asp.finished
+	asp.play()
+	await asp.finished
 
 
 func _on_button_4_pressed() -> void:
@@ -64,8 +64,8 @@ func _on_button_4_pressed() -> void:
 		remove_item("metal")
 		remove_item("electronic")
 		Global.add_item("handcrafted_accumulator")
-		asp.play()
-		await asp.finished
+	asp.play()
+	await asp.finished
 
 
 func _on_button_5_pressed() -> void:

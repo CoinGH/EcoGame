@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bkkva4xequkk0"]
+
+[ext_resource type="Script" uid="uid://bli5ceca6ovyr" path="res://scripts/checkpoint_for_sale.gd" id="1_70kyv"]
+[ext_resource type="Shader" uid="uid://htk7utvavvuu" path="res://shaders/checkpoint.gdshader" id="1_itbxq"]
+[ext_resource type="Shader" uid="uid://cki6vd2u4rnsw" path="res://shaders/checkpoint_pillar.gdshader" id="2_70kyv"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://Godot-Fontpack/fonts/montreal/Montreal-Bold.ttf" id="4_q7gai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ywqth"]
+shader = ExtResource("1_itbxq")
+shader_parameter/glow_color = Color(1, 0.05882353, 0, 1)
+shader_parameter/speed = 1.0
+shader_parameter/radius = 0.4
+shader_parameter/softness = 0.3
+
+[sub_resource type="Gradient" id="Gradient_yyywg"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 0, 0.92156863)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ywqth"]
+gradient = SubResource("Gradient_yyywg")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vsimk"]
+shader = ExtResource("2_70kyv")
+shader_parameter/glow_color = Color(1, 0.05882353, 0, 1)
+shader_parameter/speed = 1.0
+shader_parameter/beam_width = 0.4
+shader_parameter/top_fade_softness = 0.45
+shader_parameter/bottom_fade_softness = 0.2
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yqsag"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xam77"]
+radius = 18.0
+
+[node name="Checkpoint" type="Area2D" unique_id=96269948]
+script = ExtResource("1_70kyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=586468248]
+material = SubResource("ShaderMaterial_ywqth")
+scale = Vector2(1, 0.3)
+texture = SubResource("GradientTexture2D_ywqth")
+
+[node name="Pillar" type="Sprite2D" parent="." unique_id=1934433765]
+material = SubResource("ShaderMaterial_vsimk")
+position = Vector2(-20.000004, -39.000004)
+scale = Vector2(40, 40)
+texture = SubResource("CanvasTexture_yqsag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=560241260]
+position = Vector2(0, -2)
+scale = Vector2(1, 0.4)
+shape = SubResource("CircleShape2D_xam77")
+
+[node name="Label" type="Label" parent="." unique_id=259187956]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -42.0
+offset_right = 1190.9999
+offset_bottom = 585.99994
+grow_vertical = 0
+scale = Vector2(0.067, 0.067)
+theme_override_fonts/font = ExtResource("4_q7gai")
+theme_override_font_sizes/font_size = 120
+text = "I want to "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_area_2d_body_exited"]

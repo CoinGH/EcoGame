@@ -3,11 +3,15 @@
 [ext_resource type="Script" uid="uid://kumn3y644k5f" path="res://scripts/street.gd" id="1_7vr8w"]
 [ext_resource type="Texture2D" uid="uid://d0kq4axy42d1w" path="res://resources/roguelikeIndoor_transparent.png" id="1_l8dq3"]
 [ext_resource type="PackedScene" uid="uid://oec6h8gxjdmq" path="res://scenes/character_body_2d.tscn" id="1_tr5t1"]
+[ext_resource type="PackedScene" uid="uid://dhmjh4ac47pcj" path="res://scenes/items/item_body.tscn" id="2_scssp"]
 [ext_resource type="Texture2D" uid="uid://di2n85h36yrrv" path="res://resources/kenney_roguelike-modern-city/tilemap_packed.png" id="3_6epoj"]
+[ext_resource type="PackedScene" uid="uid://ojq8aq65n6yg" path="res://scenes/items/item_metal.tscn" id="3_kkqeo"]
+[ext_resource type="PackedScene" uid="uid://8mj85ih0uus0" path="res://scenes/items/item_paper.tscn" id="4_xcar7"]
 [ext_resource type="PackedScene" uid="uid://c5hg7e40mc56h" path="res://scenes/door_body.tscn" id="5_5m0si"]
 [ext_resource type="PackedScene" uid="uid://tinq5hgdq3x0" path="res://scenes/car_spawner.tscn" id="5_7vr8w"]
 [ext_resource type="Texture2D" uid="uid://bpbrl4xr6bc82" path="res://resources/kenney_pico-8-city/tilemap_packed.png" id="5_582hs"]
 [ext_resource type="Script" uid="uid://bktmmy2t0b4bh" path="res://scripts/door_body_1.gd" id="5_cotsb"]
+[ext_resource type="PackedScene" uid="uid://452msbeirgut" path="res://scenes/items/item_plastic.tscn" id="5_m3phq"]
 [ext_resource type="PackedScene" uid="uid://dxqu4j078lhxw" path="res://scenes/pause_menu.tscn" id="5_yrasx"]
 [ext_resource type="AudioStream" uid="uid://bph2gqv472lw5" path="res://sounds/sfx/kenney_rpg-audio/Audio/doorClose_3.ogg" id="6_0wd0x"]
 [ext_resource type="PackedScene" uid="uid://8yvq10h1l7pi" path="res://scenes/inventory.tscn" id="6_7vr8w"]
@@ -23,6 +27,7 @@
 [ext_resource type="Script" uid="uid://c2myo8n4vg3er" path="res://scripts/audio_stream_player_2d.gd" id="18_061y5"]
 [ext_resource type="AudioStream" uid="uid://3jcgpa1kwxav" path="res://sounds/music/freesound_community-rua-54875.mp3" id="18_582hs"]
 [ext_resource type="PackedScene" uid="uid://h5rgsb58ar2n" path="res://scenes/checkpoint.tscn" id="23_061y5"]
+[ext_resource type="PackedScene" uid="uid://bkkva4xequkk0" path="res://scenes/checkpoint_for_sale.tscn" id="28_kkqeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5turb"]
 texture = ExtResource("3_6epoj")
@@ -2389,6 +2394,7 @@ texture = ExtResource("3_6epoj")
 13:14/0 = 0
 14:14/0 = 0
 15:14/0 = 0
+15:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:14/0 = 0
 16:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:14/0 = 0
@@ -2447,6 +2453,7 @@ texture = ExtResource("3_6epoj")
 17:15/0 = 0
 17:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:15/0 = 0
+18:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:15/0 = 0
 19:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:15/0 = 0
@@ -2456,7 +2463,7 @@ texture = ExtResource("3_6epoj")
 22:15/0 = 0
 22:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:15/0 = 0
-23:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+23:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.856186, -8, 8, -8, 8, 8, 5.036045, 8)
 24:15/0 = 0
 25:15/0 = 0
 26:15/0 = 0
@@ -5285,8 +5292,25 @@ texture = ExtResource("3_6epoj")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_m25ji")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_061y5"]
+a = Vector2(-4, 0)
+b = Vector2(1506, -1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_m25ji"]
+a = Vector2(1897, -264)
+b = Vector2(1892, 1122)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r3eyu"]
+a = Vector2(-4, 0)
+b = Vector2(2164, 7)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3au6m"]
+a = Vector2(0, 1376)
+b = Vector2(0, -2)
+
 [node name="Street" type="Node2D" unique_id=1927326933]
 script = ExtResource("1_7vr8w")
+items_to_spawn = Array[PackedScene]([ExtResource("2_scssp"), ExtResource("3_kkqeo"), ExtResource("4_xcar7"), ExtResource("5_m3phq")])
 
 [node name="HUD" parent="." unique_id=1787247437 instance=ExtResource("7_5m0si")]
 
@@ -5403,40 +5427,42 @@ spawners = [NodePath("../Marker2D"), NodePath("../Marker2D3")]
 position = Vector2(575.5, -176)
 shape = SubResource("RectangleShape2D_7vla3")
 
-[node name="CarBody" parent="." unique_id=718490792 instance=ExtResource("14_fmkxj")]
+[node name="Cars" type="Node" parent="." unique_id=1222636561]
+
+[node name="CarBody" parent="Cars" unique_id=718490792 instance=ExtResource("14_fmkxj")]
 position = Vector2(327, 1080)
 
-[node name="CarBody2" parent="." unique_id=1360850680 instance=ExtResource("14_fmkxj")]
+[node name="CarBody2" parent="Cars" unique_id=1360850680 instance=ExtResource("14_fmkxj")]
 position = Vector2(395, 868)
 
-[node name="CarBody3" parent="." unique_id=227481469 instance=ExtResource("14_fmkxj")]
+[node name="CarBody3" parent="Cars" unique_id=227481469 instance=ExtResource("14_fmkxj")]
 position = Vector2(449, 689)
 
-[node name="CarBody4" parent="." unique_id=1617080836 instance=ExtResource("14_fmkxj")]
+[node name="CarBody4" parent="Cars" unique_id=1617080836 instance=ExtResource("14_fmkxj")]
 position = Vector2(322.00003, 1545)
 
-[node name="CarBody5" parent="." unique_id=388028266 instance=ExtResource("14_fmkxj")]
+[node name="CarBody5" parent="Cars" unique_id=388028266 instance=ExtResource("14_fmkxj")]
 position = Vector2(427.99997, 1375)
 
-[node name="CarBody6" parent="." unique_id=562620299 instance=ExtResource("14_fmkxj")]
+[node name="CarBody6" parent="Cars" unique_id=562620299 instance=ExtResource("14_fmkxj")]
 position = Vector2(438.99997, 1166)
 
-[node name="CarBody7" parent="." unique_id=680541087 instance=ExtResource("11_nokxu")]
+[node name="CarBody7" parent="Cars" unique_id=680541087 instance=ExtResource("11_nokxu")]
 position = Vector2(793, -141)
 
-[node name="CarBody8" parent="." unique_id=541730834 instance=ExtResource("11_nokxu")]
+[node name="CarBody8" parent="Cars" unique_id=541730834 instance=ExtResource("11_nokxu")]
 position = Vector2(881, 46.999996)
 
-[node name="CarBody9" parent="." unique_id=1847573073 instance=ExtResource("11_nokxu")]
+[node name="CarBody9" parent="Cars" unique_id=1847573073 instance=ExtResource("11_nokxu")]
 position = Vector2(824, 495)
 
-[node name="CarBody10" parent="." unique_id=59485675 instance=ExtResource("11_nokxu")]
+[node name="CarBody10" parent="Cars" unique_id=59485675 instance=ExtResource("11_nokxu")]
 position = Vector2(806, -411)
 
-[node name="CarBody11" parent="." unique_id=468529999 instance=ExtResource("11_nokxu")]
+[node name="CarBody11" parent="Cars" unique_id=468529999 instance=ExtResource("11_nokxu")]
 position = Vector2(929, -607.99994)
 
-[node name="CarBody12" parent="." unique_id=156625204 instance=ExtResource("11_nokxu")]
+[node name="CarBody12" parent="Cars" unique_id=156625204 instance=ExtResource("11_nokxu")]
 position = Vector2(926, 289)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=789217924]
@@ -5485,6 +5511,106 @@ tile_set = SubResource("TileSet_scssp")
 y_sort_enabled = true
 position = Vector2(1887, 16)
 priority = -1
+
+[node name="TrashSpawners" type="Node" parent="." unique_id=1130423207]
+
+[node name="Marker2D" type="Marker2D" parent="TrashSpawners" unique_id=1568331755]
+position = Vector2(215, 116)
+
+[node name="Marker2D2" type="Marker2D" parent="TrashSpawners" unique_id=914965495]
+position = Vector2(53, 290)
+
+[node name="Marker2D3" type="Marker2D" parent="TrashSpawners" unique_id=1575023476]
+position = Vector2(63, 1262)
+
+[node name="Marker2D4" type="Marker2D" parent="TrashSpawners" unique_id=5486396]
+position = Vector2(385, 320)
+
+[node name="Marker2D5" type="Marker2D" parent="TrashSpawners" unique_id=1382497287]
+position = Vector2(461, 910)
+
+[node name="Marker2D6" type="Marker2D" parent="TrashSpawners" unique_id=853695206]
+position = Vector2(132, 544)
+
+[node name="Marker2D7" type="Marker2D" parent="TrashSpawners" unique_id=576920810]
+position = Vector2(621, 489)
+
+[node name="Marker2D8" type="Marker2D" parent="TrashSpawners" unique_id=1277882366]
+position = Vector2(594, 1114)
+
+[node name="Marker2D9" type="Marker2D" parent="TrashSpawners" unique_id=1742170076]
+position = Vector2(807, 755)
+
+[node name="Marker2D10" type="Marker2D" parent="TrashSpawners" unique_id=1911488377]
+position = Vector2(1118, 981)
+
+[node name="Marker2D11" type="Marker2D" parent="TrashSpawners" unique_id=297015797]
+position = Vector2(1541, 513)
+
+[node name="Marker2D12" type="Marker2D" parent="TrashSpawners" unique_id=1471656388]
+position = Vector2(1623, 72)
+
+[node name="Marker2D13" type="Marker2D" parent="TrashSpawners" unique_id=1043374022]
+position = Vector2(1294, 785)
+
+[node name="Marker2D14" type="Marker2D" parent="TrashSpawners" unique_id=524843773]
+position = Vector2(1400, 1114)
+
+[node name="Marker2D15" type="Marker2D" parent="TrashSpawners" unique_id=292325766]
+position = Vector2(1587, 830)
+
+[node name="Marker2D16" type="Marker2D" parent="TrashSpawners" unique_id=1903960656]
+position = Vector2(1623, 1286)
+
+[node name="Marker2D17" type="Marker2D" parent="TrashSpawners" unique_id=1576286402]
+position = Vector2(1156, 1262)
+
+[node name="Marker2D18" type="Marker2D" parent="TrashSpawners" unique_id=1779706284]
+position = Vector2(1225, 116)
+
+[node name="Marker2D19" type="Marker2D" parent="TrashSpawners" unique_id=100292432]
+position = Vector2(1857, 320)
+
+[node name="Marker2D20" type="Marker2D" parent="TrashSpawners" unique_id=1587222786]
+position = Vector2(1561, 244)
+
+[node name="Marker2D21" type="Marker2D" parent="TrashSpawners" unique_id=500075604]
+position = Vector2(2017, 830)
+
+[node name="Marker2D22" type="Marker2D" parent="TrashSpawners" unique_id=444460248]
+position = Vector2(2017, 1262)
+
+[node name="Marker2D23" type="Marker2D" parent="TrashSpawners" unique_id=458059250]
+position = Vector2(1225, 544)
+
+[node name="Marker2D24" type="Marker2D" parent="TrashSpawners" unique_id=305725942]
+position = Vector2(594, 194)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=889895283]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1236635650]
+shape = SubResource("SegmentShape2D_061y5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2067603402]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2031327408]
+position = Vector2(239, 264)
+shape = SubResource("SegmentShape2D_m25ji")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1364470141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=2114470664]
+position = Vector2(0, 1314)
+shape = SubResource("SegmentShape2D_r3eyu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1233063680]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1790397915]
+position = Vector2(0, -2)
+shape = SubResource("SegmentShape2D_3au6m")
+
+[node name="Checkpoint3" parent="." unique_id=589100632 instance=ExtResource("28_kkqeo")]
+position = Vector2(63, 396)
 
 [connection signal="body_entered" from="CrossroadArea2D" to="CrossroadArea2D" method="_on_body_entered"]
 [connection signal="body_exited" from="CrossroadArea2D" to="CrossroadArea2D" method="_on_body_exited"]

@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://8yvq10h1l7pi" path="res://scenes/inventory.tscn" id="5_rysoc"]
 [ext_resource type="PackedScene" uid="uid://oec6h8gxjdmq" path="res://scenes/character_body_2d.tscn" id="6_1kice"]
 [ext_resource type="PackedScene" uid="uid://bqiabi7pn33kd" path="res://scenes/vending.tscn" id="6_dinhu"]
-[ext_resource type="PackedScene" uid="uid://dhmjh4ac47pcj" path="res://scenes/item_body.tscn" id="7_kvuet"]
 [ext_resource type="PackedScene" uid="uid://c5jlppj0ehu3u" path="res://scenes/shop_menu.tscn" id="10_ir15t"]
 [ext_resource type="PackedScene" uid="uid://c5hg7e40mc56h" path="res://scenes/door_body.tscn" id="11_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bjgpnyk4q6f1u" path="res://scenes/table_body.tscn" id="13_kvuet"]
@@ -2329,11 +2328,11 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.5137255)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kvuet"]
 gradient = SubResource("Gradient_dinhu")
 
-[sub_resource type="Gradient" id="Gradient_5newe"]
+[sub_resource type="Gradient" id="Gradient_ssvqc"]
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.38431373)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_37s47"]
-gradient = SubResource("Gradient_5newe")
+gradient = SubResource("Gradient_ssvqc")
 
 [node name="Game" type="Node2D" unique_id=80532876]
 y_sort_enabled = true
@@ -2390,9 +2389,6 @@ position = Vector2(401, 290)
 
 [node name="StaticBody2D" parent="." unique_id=2062938781 instance=ExtResource("6_dinhu")]
 position = Vector2(1668, 397)
-
-[node name="ItemBody" parent="." unique_id=966347275 instance=ExtResource("7_kvuet")]
-position = Vector2(733, 146)
 
 [node name="PauseMenu" parent="." unique_id=1681468942 instance=ExtResource("15_5newe")]
 layer = 11

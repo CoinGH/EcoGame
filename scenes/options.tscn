@@ -184,8 +184,8 @@ text = "Back"
 
 [connection signal="value_changed" from="VBoxContainer/HBoxContainer/volume_slider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_toggle_pressed"]
-[connection signal="toggled" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_v_sync_toggled"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer3/fullscreen_toggle" to="." method="_on_toggle_pressed"]
-[connection signal="toggled" from="VBoxContainer/HBoxContainer3/fullscreen_toggle" to="." method="_on_v_sync_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer3/fullscreen_toggle" to="." method="_on_fullscreen_toggled"]
 [connection signal="item_selected" from="VBoxContainer/HBoxContainer4/lang_options" to="." method="_on_language_item_selected"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

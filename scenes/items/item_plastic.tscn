@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dhmjh4ac47pcj"]
+[gd_scene format=3 uid="uid://452msbeirgut"]
 
-[ext_resource type="Script" uid="uid://onuiegyluw4k" path="res://scripts/item_body.gd" id="1_cjfl3"]
-[ext_resource type="Texture2D" uid="uid://qb5h0mit0nmp" path="res://resources/items/ph_1.png" id="2_mrj5j"]
-[ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="3_3ibwu"]
+[ext_resource type="Script" uid="uid://onuiegyluw4k" path="res://scripts/item_body.gd" id="1_00qql"]
+[ext_resource type="Texture2D" uid="uid://bc8y2pybnjwun" path="res://resources/items/ph_6777.png" id="2_00qql"]
+[ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="3_f85lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
 size = Vector2(80, 80)
@@ -11,19 +11,19 @@ size = Vector2(80, 80)
 size = Vector2(166, 163)
 
 [node name="ItemBody" type="StaticBody2D" unique_id=966347275]
-script = ExtResource("1_cjfl3")
-item_name = "glass"
+script = ExtResource("1_00qql")
 
 [node name="Ph1" type="Sprite2D" parent="." unique_id=1205810571]
-position = Vector2(699.99994, 198.00003)
+position = Vector2(-1.000001, 4.5657158e-05)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_mrj5j")
+texture = ExtResource("2_00qql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2060302389]
-position = Vector2(700, 198)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ir15t")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=569087318]
+position = Vector2(-701, -198)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=167729973]
 position = Vector2(701, 198)
@@ -31,9 +31,9 @@ shape = SubResource("RectangleShape2D_ca42v")
 
 [node name="KeyboardE2" type="Sprite2D" parent="." unique_id=283665572]
 z_index = 5
-position = Vector2(763, 179)
+position = Vector2(62.00006, -18.999985)
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("3_3ibwu")
+texture = ExtResource("3_f85lo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

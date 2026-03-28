@@ -316,7 +316,7 @@ offset_bottom = 40.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=768816464]
 stream = ExtResource("6_xw4en")
-volume_db = -10.0
+volume_db = -5.0
 pitch_scale = 2.25
 
 [connection signal="pressed" from="HBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]

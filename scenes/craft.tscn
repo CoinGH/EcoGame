@@ -325,7 +325,8 @@ flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=619640695]
 stream = ExtResource("6_nxr8o")
-pitch_scale = 1.5
+volume_db = -5.0
+pitch_scale = 2.25
 
 [connection signal="pressed" from="HBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/ColorRect2/Button2" to="." method="_on_button_2_pressed"]

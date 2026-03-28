@@ -23,7 +23,10 @@ func _on_button_quit_pressed() -> void:
 	Global.health = 100
 	Global.money = 0
 	Global.can_move = true
-	get_tree().paused = false 
+	get_tree().paused = false
+	Global.npc_memory.clear()
+	for i in range(15):
+		Global.inventory[i] = ""
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_button_exit_pressed() -> void:

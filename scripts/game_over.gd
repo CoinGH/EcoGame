@@ -8,6 +8,9 @@ func _on_button_to_main_menu_pressed() -> void:
 	Global.money = 0.0
 	Global.can_move = true
 	Global.is_instructed = false
+	Global.npc_memory.clear()
+	for i in range(15):
+		Global.inventory[i] = ""
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_button_restart_pressed() -> void:
@@ -17,4 +20,7 @@ func _on_button_restart_pressed() -> void:
 	Global.money = 0.0
 	Global.can_move = true
 	Global.is_instructed = false
+	Global.npc_memory.clear()
+	for i in range(15):
+		Global.inventory[i] = ""
 	get_tree().change_scene_to_file("res://scenes/game.tscn")

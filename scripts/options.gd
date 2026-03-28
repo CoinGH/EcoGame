@@ -16,6 +16,8 @@ func _ready() -> void:
 	vsync_toggle.button_pressed = Global.is_vsync
 	fullscreen_toggle.button_pressed = Global.is_fullscreen
 	lang_options.selected = Global.language_index
+	if OS.has_feature("web"):
+		vsync_toggle.disabled = true
 
 func _on_toggle_pressed() -> void:
 	asps.play()

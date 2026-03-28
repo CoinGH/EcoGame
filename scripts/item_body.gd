@@ -12,6 +12,7 @@ func _input(event: InputEvent) -> void:
 		var was_added = Global.add_item(item_name)
 		if was_added:
 			queue_free()
+		Global.e_btn.emit()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":

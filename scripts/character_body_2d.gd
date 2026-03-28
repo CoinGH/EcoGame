@@ -8,6 +8,10 @@ var step_timer: float = 0.0
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var asp_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var asp_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
+@onready var asp: AudioStreamPlayer = $AudioStreamPlayer
+
+func _ready() -> void:
+	Global.e_btn.connect(_on_e_press)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Inventory"):
@@ -61,3 +65,6 @@ func _inventory() -> void:
 		Global.can_move = false
 	else:
 		Global.can_move = true
+
+func _on_e_press() -> void:
+	asp.play()

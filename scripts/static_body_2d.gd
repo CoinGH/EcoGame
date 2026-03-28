@@ -9,12 +9,13 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact") and inside:
-		Global.money += Global.inventory.values().count("glass") * Global.glass_price + Global.inventory.values().count("paper") * Global.paper_price + Global.inventory.values().count("plastic") * Global.plastic_price
+		Global.money += Global.inventory.values().count("glass") * Global.glass_price + Global.inventory.values().count("paper") * Global.paper_price + Global.inventory.values().count("plastic") * Global.plastic_price + Global.inventory.values().count("metal") * Global.metal_price
 		Global.money_changed.emit(Global.money)
 		for i in range (0, 15):
-			if Global.inventory[i] == "plastic" or Global.inventory[i] == "glass" or Global.inventory[i] == "paper":
+			if Global.inventory[i] == "plastic" or Global.inventory[i] == "glass" or Global.inventory[i] == "paper" or Global.inventory[i] == "metal":
 				Global.inventory[i] = ""
 		Global.inventory_updated.emit()
+		Global.e_btn.emit()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":

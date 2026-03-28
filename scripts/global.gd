@@ -9,20 +9,23 @@ var is_fullscreen: bool = false
 var is_vsync: bool = false
 var language_index: int = 0
 var inventory = {
-	0: "", 1: "", 2: "", 3: "", 4: "",
-	5: "", 6: "", 7: "", 8: "", 9: "",
-	10: "", 11: "", 12: "", 13: "", 14: ""
+	0: "fruit_salad", 1: "fruit_salad", 2: "handcrafted_game_console", 3: "", 4: "",
+	5: "handcrafted_game_console", 6: "handcrafted_accumulator", 7: "", 8: "", 9: "",
+	10: "soup", 11: "soup", 12: "handcrafted_accumulator", 13: "", 14: ""
 }
+var npc_memory = {}
 var can_move: bool = true
 var car_speed: float = 300.0
 var spawn_point: String = ""
 var is_instructed: bool = false
 
 const plastic_price: float = 15.75
-const glass_price: float = 19.25
+const glass_price: float = 18.25
 const paper_price: float = 8.67
+const metal_price: float = 23.33
 
 signal inventory_updated
+signal e_btn
 
 func check_space() -> bool:
 	for i in range(0, 15):

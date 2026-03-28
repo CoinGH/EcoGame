@@ -12,6 +12,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact") and inside:
 		_inv()
+		Global.e_btn.emit()
 
 func _inv() -> void:
 	menu.visible = !menu.visible
