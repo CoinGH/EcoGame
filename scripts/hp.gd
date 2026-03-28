@@ -15,4 +15,4 @@ func fade_to_black() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(res_screen, "modulate:a", 1.1, 2)
 	await tween.finished
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+	get_tree().change_scene_to_file("res://scenes/GUI/GameOver.tscn")

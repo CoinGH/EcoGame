@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dlps0jd6qbyft" path="res://resources/tilemaps/roguelikeChar_transparent.png" id="14_j14q8"]
 [ext_resource type="Texture2D" uid="uid://d0kq4axy42d1w" path="res://resources/tilemaps/roguelikeIndoor_transparent.png" id="15_5u241"]
 [ext_resource type="Texture2D" uid="uid://y778la2mt4lt" path="res://resources/tilemaps/tiles and items.png" id="16_pqync"]
+[ext_resource type="PackedScene" uid="uid://bkkva4xequkk0" path="res://scenes/checkpoint_for_sale.tscn" id="17_5u241"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v8qu"]
 texture = ExtResource("11_44xle")
@@ -5896,6 +5897,7 @@ position = Vector2(15.003196, -1.6376191)
 position = Vector2(512, 601)
 
 [node name="CharacterBody2D" parent="." unique_id=1145525770 instance=ExtResource("4_032fp")]
+z_index = 1
 position = Vector2(512, 601)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=51834913]
@@ -5951,6 +5953,11 @@ y_sort_enabled = true
 position = Vector2(137.99998, 229.5)
 scale = Vector2(4.34375, 7.234374)
 texture = SubResource("GradientTexture2D_5u241")
+
+[node name="Checkpoint" parent="." unique_id=96269948 instance=ExtResource("17_5u241")]
+position = Vector2(887, 564)
+scale = Vector2(2, 2)
+npc_id = "dealer_5"
 
 [editable path="DoorBody"]
 [editable path="StaticBody2D"]

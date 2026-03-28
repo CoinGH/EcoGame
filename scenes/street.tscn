@@ -5610,7 +5610,19 @@ position = Vector2(0, -2)
 shape = SubResource("SegmentShape2D_3au6m")
 
 [node name="Checkpoint3" parent="." unique_id=589100632 instance=ExtResource("28_kkqeo")]
-position = Vector2(63, 396)
+position = Vector2(25, 427)
+
+[node name="Checkpoint4" parent="." unique_id=1560133509 instance=ExtResource("28_kkqeo")]
+position = Vector2(1728, 1115)
+npc_id = "dealer_2"
+
+[node name="Checkpoint5" parent="." unique_id=1110211865 instance=ExtResource("28_kkqeo")]
+position = Vector2(1154, 50)
+npc_id = "dealer_3"
+
+[node name="Checkpoint6" parent="." unique_id=1567432566 instance=ExtResource("28_kkqeo")]
+position = Vector2(33, 1169)
+npc_id = "dealer_4"
 
 [connection signal="body_entered" from="CrossroadArea2D" to="CrossroadArea2D" method="_on_body_entered"]
 [connection signal="body_exited" from="CrossroadArea2D" to="CrossroadArea2D" method="_on_body_exited"]
