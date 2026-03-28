@@ -2347,6 +2347,7 @@ autoplay = true
 script = ExtResource("3_ssvqc")
 
 [node name="Instruction" type="CanvasLayer" parent="." unique_id=1104169149]
+visible = false
 script = ExtResource("4_264po")
 
 [node name="ColorRect" type="ColorRect" parent="Instruction" unique_id=407324386]
