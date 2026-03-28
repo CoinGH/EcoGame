@@ -4,7 +4,6 @@ var inside: bool = false
 @onready var keyboard_e: Sprite2D = $KeyboardE
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	keyboard_e.hide()
 
@@ -16,10 +15,6 @@ func _input(event: InputEvent) -> void:
 			if Global.inventory[i] == "plastic" or Global.inventory[i] == "glass" or Global.inventory[i] == "paper":
 				Global.inventory[i] = ""
 		Global.inventory_updated.emit()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":

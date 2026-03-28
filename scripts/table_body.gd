@@ -4,7 +4,7 @@ var inside: bool = false
 @onready var keyboard_e: Sprite2D = $KeyboardE
 @export var menu: CanvasLayer
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	keyboard_e.hide()
 	menu.hide()

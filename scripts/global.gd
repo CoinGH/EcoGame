@@ -22,7 +22,6 @@ const plastic_price: float = 15.75
 const glass_price: float = 19.25
 const paper_price: float = 8.67
 
-# Сигнал, щоб казати UI, що інвентар змінився і треба перемалювати іконки
 signal inventory_updated
 
 func check_space() -> bool:
@@ -31,21 +30,12 @@ func check_space() -> bool:
 			return true
 	return false
 
-# Універсальна функція додавання
 func add_item(item_name: String) -> bool:
-	for i in range(0, 15): # Цикл пробігається по слотах від 1 до 15
-		if inventory[i] == "": # Якщо знаходить порожній слот
-			inventory[i] = item_name # Кладе туди предмет
+	for i in range(0, 15):
+		if inventory[i] == "":
+			inventory[i] = item_name
 			print("Додано ", item_name, " у слот ", i)
-			inventory_updated.emit() # Кричимо, що інвентар оновився
-			return true # Повертаємо true (успіх)
+			inventory_updated.emit()
+			return true
 	print("Інвентар повний!")
-	return false # Якщо дійшли сюди, значить вільних місць немає (false)
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	return false

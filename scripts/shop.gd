@@ -4,7 +4,6 @@ extends Node2D
 @onready var player = $CharacterBody2D
 @onready var asp_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inventory.hide()
 	Global.money_changed.emit(Global.money)

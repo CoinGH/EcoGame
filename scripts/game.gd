@@ -5,7 +5,6 @@ extends Node2D
 @onready var asp_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var instruction: CanvasLayer = $Instruction
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inventory.hide()
 	instruction.show()
@@ -23,11 +22,3 @@ func _ready() -> void:
 		if target_marker != null:
 			player.global_position = target_marker.global_position
 		Global.spawn_point = ""
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _input(event: InputEvent) -> void:
-	pass
