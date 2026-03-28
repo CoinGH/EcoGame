@@ -3,8 +3,8 @@ extends CanvasLayer
 # Шлях до твоєї сітки (перетягни сюди GridContainer з затиснутим Ctrl)
 @onready var grid: GridContainer = $GridContainer 
 
-var tex_full = preload("res://resources/ph_1.png")
-var tex_empty = preload("res://resources/ph_2.png")
+var tex_full = preload("res://resources/items/ph_1.png")
+var tex_empty = preload("res://resources/items/ph_2.png")
 
 func _ready() -> void:
 	# Слухаємо сигнал з Глобала. Коли щось підібрали — запускаємо update_ui

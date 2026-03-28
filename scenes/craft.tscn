@@ -1,0 +1,334 @@
+[gd_scene format=3 uid="uid://cnyb8b2a7tbcs"]
+
+[ext_resource type="Script" uid="uid://ckpxxik0b8hyc" path="res://scripts/craft.gd" id="1_eypww"]
+[ext_resource type="Shader" uid="uid://byx52fl1ehps1" path="res://shaders/rgb.gdshader" id="2_eypww"]
+[ext_resource type="Texture2D" uid="uid://bqs4w6qlndecg" path="res://resources/items/ph_2.png" id="3_nxr8o"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://Godot-Fontpack/fonts/montreal/Montreal-Bold.ttf" id="4_qiwh7"]
+[ext_resource type="FontFile" uid="uid://bjtyhd1n3mwav" path="res://Godot-Fontpack/fonts/montreal/Montreal-Regular.ttf" id="4_sccp2"]
+[ext_resource type="AudioStream" uid="uid://534djcq4o2mt" path="res://sounds/sfx/kenney_ui-audio/Audio/mouseclick1.ogg" id="6_nxr8o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_37s47"]
+shader = ExtResource("2_eypww")
+shader_parameter/speed = 1.0
+
+[node name="Craft" type="CanvasLayer" unique_id=2029636377]
+script = ExtResource("1_eypww")
+
+[node name="TestObj" type="ColorRect" parent="." unique_id=1170957133]
+material = SubResource("ShaderMaterial_37s47")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -850.0
+offset_top = -375.0
+offset_right = 850.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.5882353, 0.4509804, 0.65882355, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TestObj" unique_id=865326171]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.5
+offset_right = 300.5
+offset_bottom = 123.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 64
+text = "Crafting"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TestObj" unique_id=1378636629]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -446.75
+offset_top = -66.0
+offset_right = 446.75
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_sccp2")
+theme_override_font_sizes/normal_font_size = 42
+text = "Click on the recipe to craft"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1455235856]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=790853974]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+color = Color(1, 1, 1, 0.62352943)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect" unique_id=1910833880]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 224.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_nxr8o")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect" unique_id=1647520562]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.10980392)
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 30
+text = "Handcrafted Game Console
+---
+Ingredients:
+2 pcs - plastic
+1 pcs - electronic"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/ColorRect" unique_id=2035944691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=1676691614]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+color = Color(1, 1, 1, 0.62352943)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect2" unique_id=1859362185]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 224.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_nxr8o")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect2" unique_id=170399122]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.10980392)
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 30
+text = "Fruit Salad
+---
+Ingredients:
+2 pcs - fruits
+1 pcs - sugar"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="HBoxContainer/ColorRect2" unique_id=1034922426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=1813115698]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+color = Color(1, 1, 1, 0.62352943)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect3" unique_id=1296914181]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 224.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_nxr8o")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect3" unique_id=2006336945]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.10980392)
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 30
+text = "Soup
+---
+Ingredients:
+1 pcs - vegetables
+1 pcs - salt"
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="HBoxContainer/ColorRect3" unique_id=396299849]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer" unique_id=103367475]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+color = Color(1, 1, 1, 0.62352943)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect4" unique_id=455243711]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 224.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_nxr8o")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect4" unique_id=745881651]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.10980392)
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 30
+text = "Handcrafted Accumulator
+---
+Ingredients:
+ 	1 pcs - metal
+ 	1 pcs - electronic"
+horizontal_alignment = 1
+
+[node name="Button4" type="Button" parent="HBoxContainer/ColorRect4" unique_id=491700301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer" unique_id=2052910756]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+color = Color(1, 1, 1, 0.62352943)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect5" unique_id=450399894]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 224.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_nxr8o")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ColorRect5" unique_id=1767286567]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7921569)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect5" unique_id=525276539]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -274.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.10980392)
+theme_override_fonts/normal_font = ExtResource("4_qiwh7")
+theme_override_font_sizes/normal_font_size = 30
+text = "LOCKED
+---
+Ingredients:
+ 	█ pcs - ████
+ 	█ pcs - ████"
+horizontal_alignment = 1
+
+[node name="Button5" type="Button" parent="HBoxContainer/ColorRect5" unique_id=1552669119]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=619640695]
+stream = ExtResource("6_nxr8o")
+pitch_scale = 1.5
+
+[connection signal="pressed" from="HBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/ColorRect5/Button5" to="." method="_on_button_5_pressed"]

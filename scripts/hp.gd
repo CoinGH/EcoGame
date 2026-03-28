@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 	pass
 
 func fade_to_black() -> void:
+	Global.can_move = false
 	var tween = get_tree().create_tween()
 	tween.tween_property(res_screen, "modulate:a", 1.1, 2)
 	await tween.finished

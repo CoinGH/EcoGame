@@ -3,8 +3,11 @@ extends CharacterBody2D
 const SPEED = 300.0
 const SPRINT_SPEED = 450.0
 @onready var inventory: CanvasLayer = $"../Inventory"
-var can_move: bool = true
 var sprint: bool = false
+var step_timer: float = 0.0
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var asp_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var asp_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Inventory"):
@@ -15,7 +18,7 @@ func _input(event: InputEvent) -> void:
 		sprint = false
 
 func _physics_process(_delta: float) -> void:
-	if not can_move:
+	if not Global.can_move:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		move_and_slide()
@@ -30,10 +33,31 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+	if velocity.length() > 0: 
+		var time = Time.get_ticks_msec() / 1000.0
+		anim.rotation = sin(time * 22.5) * 0.20 # 25.0 - швидкість хитання, 0.25 - сила нахилу
+
+		if velocity.x < 0:
+			anim.flip_h = true
+		elif velocity.x > 0:
+			anim.flip_h = false
+		step_timer -= _delta
+		if step_timer <= 0.0:
+			if randi_range(0, 1):
+				asp_2d.play()
+			else:
+				asp_2d_2.play()
+			if sprint:
+				step_timer = 0.25 
+			else:
+				step_timer = 0.4
+	else:
+		anim.rotation = 0
+		step_timer = 0.0
 
 func _inventory() -> void:
 	inventory.visible = !inventory.visible
 	if inventory.visible:
-		can_move = false
+		Global.can_move = false
 	else:
-		can_move = true
+		Global.can_move = true

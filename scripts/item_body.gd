@@ -1,7 +1,7 @@
 extends StaticBody2D
 @onready var area_2d: Area2D = $Area2D
 var inside: bool = false
-@onready var keyboard_e_2: Sprite2D = $"../KeyboardE2"
+@onready var keyboard_e_2: Sprite2D = $KeyboardE2
 
 # МАГІЯ ТУТ: @export дозволяє вписувати назву прямо в Інспекторі справа!
 @export var item_name: String = "plastic" 

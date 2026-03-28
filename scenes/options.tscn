@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://doq62cu5a22sa" path="res://scripts/options.gd" id="1_yjkok"]
 [ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://Godot-Fontpack/fonts/connection_ii/ConnectionII.otf" id="2_2iy26"]
+[ext_resource type="AudioStream" uid="uid://bxcipqer0mu41" path="res://sounds/sfx/kenney_ui-audio/Audio/click2.ogg" id="2_kv8mn"]
+[ext_resource type="AudioStream" uid="uid://csbchos031nbu" path="res://sounds/sfx/kenney_ui-audio/Audio/switch11.ogg" id="3_1sggn"]
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://Godot-Fontpack/fonts/montreal/Montreal-Bold.ttf" id="3_2iy26"]
 
 [node name="Options" type="Control" unique_id=168706576]
 layout_mode = 3
@@ -11,6 +14,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yjkok")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2035146743]
+stream = ExtResource("2_kv8mn")
+volume_db = -10.0
+pitch_scale = 2.25
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=392342966]
+stream = ExtResource("3_1sggn")
+volume_db = -10.0
+pitch_scale = 2.25
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1568418722]
 z_index = -2
@@ -47,7 +60,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
 theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 140
 text = " "
 metadata/_edit_use_anchors_ = true
 
@@ -55,9 +68,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.20392157)
 theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 86
 text = "Options"
 metadata/_edit_use_anchors_ = true
 
@@ -74,16 +87,17 @@ alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=318213843]
-custom_minimum_size = Vector2(120, 0)
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=245841340]
+custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
-theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 19
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.105882354)
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 32
 text = "Volume"
+vertical_alignment = 1
 
 [node name="volume_slider" type="HSlider" parent="VBoxContainer/HBoxContainer" unique_id=1638799555]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 step = 0.5
 value = 100.0
@@ -94,49 +108,55 @@ layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=367776634]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
-theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 19
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.105882354)
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 32
 text = "V-Sync"
+vertical_alignment = 1
 
 [node name="vsync_toggle" type="CheckButton" parent="VBoxContainer/HBoxContainer2" unique_id=1402786467]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+text = "OFF/ON"
+icon_alignment = 1
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=741730078]
 layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1487219696]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
-theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 19
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.105882354)
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 32
 text = "Fullscreen"
+vertical_alignment = 1
 
 [node name="fullscreen_toggle" type="CheckButton" parent="VBoxContainer/HBoxContainer3" unique_id=1841804675]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
+text = "OFF/ON"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=723955820]
 layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=194699080]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
-theme_override_fonts/font = ExtResource("2_2iy26")
-theme_override_font_sizes/font_size = 19
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.105882354)
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 32
 text = "Language"
+vertical_alignment = 1
 
 [node name="lang_options" type="OptionButton" parent="VBoxContainer/HBoxContainer4" unique_id=996711522]
 clip_contents = true
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_2iy26")
 selected = 0
@@ -154,15 +174,18 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -118.0
-offset_top = -31.0
+offset_left = -245.0
+offset_top = -53.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_2iy26")
+theme_override_fonts/font = ExtResource("3_2iy26")
+theme_override_font_sizes/font_size = 32
 text = "Back"
 
 [connection signal="value_changed" from="VBoxContainer/HBoxContainer/volume_slider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_toggle_pressed"]
 [connection signal="toggled" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/fullscreen_toggle" to="." method="_on_toggle_pressed"]
 [connection signal="toggled" from="VBoxContainer/HBoxContainer3/fullscreen_toggle" to="." method="_on_v_sync_toggled"]
 [connection signal="item_selected" from="VBoxContainer/HBoxContainer4/lang_options" to="." method="_on_language_item_selected"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

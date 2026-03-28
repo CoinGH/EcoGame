@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5hg7e40mc56h"]
+
+[ext_resource type="Script" uid="uid://cedlwjlddqxnx" path="res://scripts/door_body.gd" id="1_x1l38"]
+[ext_resource type="AudioStream" uid="uid://b5tulf3bhin5n" path="res://sounds/sfx/kenney_rpg-audio/Audio/doorOpen_2.ogg" id="2_gn3va"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
+size = Vector2(160, 265.68066)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+size = Vector2(198.6959, 546.6644)
+
+[node name="DoorBody" type="StaticBody2D" unique_id=164409045]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_x1l38")
+scene = "res://scenes/street.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1362124798]
+position = Vector2(48.333645, 11.666565)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_rysoc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1445727891]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=38947463]
+position = Vector2(-33.333332, 21.02533)
+scale = Vector2(0.6000002, 0.6000002)
+shape = SubResource("RectangleShape2D_ssvqc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1982958045]
+stream = ExtResource("2_gn3va")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

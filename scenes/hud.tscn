@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ckx6ajqhs78a5"]
+
+[ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://Godot-Fontpack/fonts/montreal/Montreal-Bold.ttf" id="1_5ysmq"]
+[ext_resource type="Script" uid="uid://biooqmrbrc7rr" path="res://scripts/money.gd" id="2_6fi6k"]
+[ext_resource type="Script" uid="uid://c6nh81yg5130b" path="res://scripts/hp.gd" id="3_uo2fv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.98984355, 5.4869056e-06, 9.62615e-07, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=1787247437]
+
+[node name="ResScreen" type="ColorRect" parent="." unique_id=510730229]
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Money" type="Label" parent="." unique_id=229607123]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -139.0
+offset_bottom = 45.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
+theme_override_fonts/font = ExtResource("1_5ysmq")
+theme_override_font_sizes/font_size = 32
+text = "0.0 $"
+horizontal_alignment = 1
+script = ExtResource("2_6fi6k")
+
+[node name="HP" type="ProgressBar" parent="." unique_id=152646601]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.0
+offset_top = -37.0
+offset_right = 219.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxFlat_iywne")
+step = 0.1
+value = 100.0
+script = ExtResource("3_uo2fv")

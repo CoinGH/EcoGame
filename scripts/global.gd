@@ -1,5 +1,5 @@
 extends Node
-var money = 0
+var money = 357.45
 var health = 100
 signal money_changed(new_value)
 signal health_changed(new_val)
@@ -13,6 +13,10 @@ var inventory = {
 	5: "", 6: "", 7: "", 8: "", 9: "",
 	10: "", 11: "", 12: "", 13: "", 14: ""
 }
+var can_move: bool = true
+var car_speed: float = 300.0
+var spawn_point: String = ""
+var is_instructed: bool = false
 
 const plastic_price: float = 15.75
 const glass_price: float = 19.25
@@ -20,6 +24,12 @@ const paper_price: float = 8.67
 
 # Сигнал, щоб казати UI, що інвентар змінився і треба перемалювати іконки
 signal inventory_updated
+
+func check_space() -> bool:
+	for i in range(0, 15):
+		if inventory[i] == "":
+			return true
+	return false
 
 # Універсальна функція додавання
 func add_item(item_name: String) -> bool:
@@ -29,7 +39,6 @@ func add_item(item_name: String) -> bool:
 			print("Додано ", item_name, " у слот ", i)
 			inventory_updated.emit() # Кричимо, що інвентар оновився
 			return true # Повертаємо true (успіх)
-			
 	print("Інвентар повний!")
 	return false # Якщо дійшли сюди, значить вільних місць немає (false)
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://tinq5hgdq3x0"]
+
+[ext_resource type="Script" uid="uid://dw0indlnc8x3l" path="res://scripts/car_spawner.gd" id="1_jxr84"]
+[ext_resource type="PackedScene" uid="uid://bwdklr35buc8u" path="res://scenes/car_body.tscn" id="2_afg3t"]
+
+[node name="Marker2D" type="Marker2D" unique_id=2085142187]
+script = ExtResource("1_jxr84")
+car_scene = ExtResource("2_afg3t")
+
+[node name="Timer" type="Timer" parent="." unique_id=763626471]
+wait_time = 1.0999999999999999
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

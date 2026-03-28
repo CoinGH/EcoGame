@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://oec6h8gxjdmq"]
+
+[ext_resource type="Script" uid="uid://daa645er8e4" path="res://scripts/character_body_2d.gd" id="1_dn4c7"]
+[ext_resource type="Texture2D" uid="uid://dlps0jd6qbyft" path="res://resources/roguelikeChar_transparent.png" id="3_ws0vm"]
+[ext_resource type="AudioStream" uid="uid://bhm47bajnr6u4" path="res://sounds/sfx/kenney_rpg-audio/Audio/footstep02.ogg" id="4_4vejd"]
+[ext_resource type="AudioStream" uid="uid://byyr1vmj7uokb" path="res://sounds/sfx/kenney_rpg-audio/Audio/footstep00.ogg" id="5_ws0vm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
+atlas = ExtResource("3_ws0vm")
+region = Rect2(0, 104, 16, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5newe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kice")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(64, 36)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1145525770]
+y_sort_enabled = true
+script = ExtResource("1_dn4c7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=781463428]
+position = Vector2(0, -10)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_5newe")
+animation = &"idle"
+frame_progress = 0.14194635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=152494929]
+position = Vector2(0, 0.375)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1677774724]
+position = Vector2(0, 10)
+stream = ExtResource("4_4vejd")
+volume_db = -5.0
+pitch_scale = 1.5
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1252223072]
+stream = ExtResource("5_ws0vm")
+volume_db = -5.0
+pitch_scale = 1.5

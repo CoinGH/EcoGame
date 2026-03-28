@@ -21,6 +21,10 @@ Global="*uid://cy22ou1nevm0w"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
+window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://bnkh68scx45sx"
 
 [input]
@@ -86,6 +90,10 @@ Sprint={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

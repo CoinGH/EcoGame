@@ -8,10 +8,11 @@ func _ready() -> void:
 
 func _on_money_changed(value):
 	text = str(value) + " $"
-	if Global.money >= 1000:
+	if Global.money >= 500:
 		fade_to_black()
 
 func fade_to_black() -> void:
+	Global.can_move = false
 	var tween = get_tree().create_tween()
 	tween.tween_property(res_screen, "modulate:a", 1.1, 2)
 	await tween.finished

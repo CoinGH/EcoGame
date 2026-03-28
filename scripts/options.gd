@@ -3,8 +3,12 @@ extends Control
 @onready var vsync_toggle: CheckButton = $VBoxContainer/HBoxContainer2/vsync_toggle
 @onready var fullscreen_toggle: CheckButton = $VBoxContainer/HBoxContainer3/fullscreen_toggle
 @onready var lang_options: OptionButton = $VBoxContainer/HBoxContainer4/lang_options
+@onready var asp: AudioStreamPlayer = $AudioStreamPlayer
+@onready var asps: AudioStreamPlayer = $AudioStreamPlayer2
 
 func _on_back_button_pressed() -> void:
+	asp.play()
+	await asp.finished
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _ready() -> void:
@@ -12,6 +16,10 @@ func _ready() -> void:
 	vsync_toggle.button_pressed = Global.is_vsync
 	fullscreen_toggle.button_pressed = Global.is_fullscreen
 	lang_options.selected = Global.language_index
+
+func _on_toggle_pressed() -> void:
+	asps.play()
+	await asps.finished
 
 # ---------------------------------------------------
 # ГУЧНІСТЬ (HSlider)
