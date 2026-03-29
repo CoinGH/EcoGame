@@ -1,36 +1,65 @@
 [gd_scene format=3 uid="uid://bwdklr35buc8u"]
 
 [ext_resource type="Script" uid="uid://d1u053oxlkx1c" path="res://scripts/car_body.gd" id="1_2f06x"]
-[ext_resource type="Texture2D" uid="uid://bvugxyfoy67n1" path="res://resources/items/ph_c.png" id="2_tw4ft"]
+[ext_resource type="Texture2D" uid="uid://di2n85h36yrrv" path="res://resources/tilemaps/tilemap_packed_kenney_roguelike-modern-city.png" id="2_2f06x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl11u"]
-size = Vector2(600.0005, 400)
+size = Vector2(380.00027, 300.00018)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
-size = Vector2(705.001, 495.00073)
+size = Vector2(446.6676, 320.00067)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2f06x"]
+load_path = "res://.godot/imported/tilemap_packed_kenney_roguelike-modern-city.png-f4c4aa90841f56daf152b91ee26d618e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tw4ft"]
+load_path = "res://.godot/imported/tilemap_packed_kenney_roguelike-modern-city.png-f4c4aa90841f56daf152b91ee26d618e.ctex"
 
 [node name="CarBody" type="AnimatableBody2D" unique_id=718490792]
 rotation = 1.5707964
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_2f06x")
 
-[node name="Car" type="Sprite2D" parent="." unique_id=2078055305]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("2_tw4ft")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1988961332]
-scale = Vector2(0.99999946, 0.99999946)
+position = Vector2(-5.0000043, -14.999992)
+scale = Vector2(0.99999917, 0.99999917)
 shape = SubResource("RectangleShape2D_pl11u")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=650350687]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1639779640]
-position = Vector2(-42.50001, -2.4999795)
-scale = Vector2(0.99999833, 0.99999833)
+position = Vector2(-10, -14.999995)
+scale = Vector2(0.99999785, 0.99999785)
 shape = SubResource("RectangleShape2D_bhx41")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1272763355]
-rect = Rect2(-304.99997, -204.99998, 609.99994, 404.99997)
+rect = Rect2(-206.07765, -162.73312, 414.8532, 297.98395)
+
+[node name="Car" type="Sprite2D" parent="." unique_id=2078055305]
+visible = false
+rotation = -1.5707964
+scale = Vector2(13, 13)
+texture = ExtResource("2_2f06x")
+region_enabled = true
+region_rect = Rect2(496, 289, 31, 33)
+
+[node name="Car2" type="Sprite2D" parent="." unique_id=700319392]
+visible = false
+position = Vector2(-13.333335, -13.333333)
+rotation = -1.5707964
+scale = Vector2(13, 13)
+texture = SubResource("CompressedTexture2D_2f06x")
+region_enabled = true
+region_rect = Rect2(496, 352, 32, 32)
+
+[node name="Car3" type="Sprite2D" parent="." unique_id=1119462610]
+visible = false
+position = Vector2(-13.333335, -13.333333)
+rotation = -1.5707964
+scale = Vector2(13, 13)
+texture = SubResource("CompressedTexture2D_tw4ft")
+region_enabled = true
+region_rect = Rect2(496, 416, 32, 32)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

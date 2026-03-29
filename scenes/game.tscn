@@ -3419,7 +3419,7 @@ script = ExtResource("1_p57ef")
 
 [node name="AudioStreamMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1102872468]
 stream = ExtResource("2_rysoc")
-volume_db = -80.0
+volume_db = -30.0
 pitch_scale = 1.05
 autoplay = true
 script = ExtResource("3_ssvqc")
