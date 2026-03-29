@@ -1,34 +1,49 @@
 [gd_scene format=3 uid="uid://bjgpnyk4q6f1u"]
 
-[ext_resource type="Texture2D" uid="uid://rnswpffip0vp" path="res://resources/other/ph_0.png" id="1_lmxw4"]
 [ext_resource type="Script" uid="uid://dn0pbbgnvemqn" path="res://scripts/table_body.gd" id="1_u6ugx"]
+[ext_resource type="Texture2D" uid="uid://d0kq4axy42d1w" path="res://resources/tilemaps/roguelikeIndoor_transparent.png" id="2_gijen"]
 [ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="3_gijen"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
-size = Vector2(400, 400)
+size = Vector2(243.33331, 483.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
-size = Vector2(553.33325, 556.6667)
+size = Vector2(450, 666.6667)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_utc6s"]
+load_path = "res://.godot/imported/roguelikeIndoor_transparent.png-d86cd7703749c26171b5704a33d11bd0.ctex"
 
 [node name="TableBody" type="StaticBody2D" unique_id=177632493]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_u6ugx")
 
-[node name="Ph0" type="Sprite2D" parent="." unique_id=641333250]
-texture = ExtResource("1_lmxw4")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=259109441]
+position = Vector2(1.6666604, -28.333336)
 shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=87297174]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=462512029]
-position = Vector2(0, -8.333374)
+position = Vector2(1.6666634, -26.666656)
 shape = SubResource("RectangleShape2D_trtic")
+
+[node name="Ph0" type="Sprite2D" parent="." unique_id=641333250]
+position = Vector2(0, -150)
+scale = Vector2(15, 15)
+texture = ExtResource("2_gijen")
+region_enabled = true
+region_rect = Rect2(221, 153, 16, 16)
+
+[node name="Ph1" type="Sprite2D" parent="." unique_id=1776838465]
+position = Vector2(0, 90)
+scale = Vector2(15, 15)
+texture = SubResource("CompressedTexture2D_utc6s")
+region_enabled = true
+region_rect = Rect2(221, 170, 16, 16)
 
 [node name="KeyboardE" type="Sprite2D" parent="." unique_id=406846303]
 z_index = 5
-position = Vector2(410.00006, -169.99998)
+position = Vector2(290, -170.00002)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("3_gijen")
 
