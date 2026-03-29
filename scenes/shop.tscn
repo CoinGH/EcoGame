@@ -7992,7 +7992,7 @@ separation = Vector2i(1, 1)
 0:6/0 = 0
 0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.4173164, 8, -3.4173164, 8, 6.991639, -8, 6.991639)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.4173164, 8, -3.4173164, 8, 6.991639, -8, 6.991639)
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
@@ -8334,7 +8334,6 @@ position = Vector2(512, 601)
 scale = Vector2(0.76, 0.76)
 
 [node name="TileMapLayerCharacter" type="TileMapLayer" parent="." unique_id=1051428989]
-z_index = 1
 y_sort_enabled = true
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAATAAMAAQAAAAcAAAASAAoAAQABAAYAAAA=")

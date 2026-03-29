@@ -19,10 +19,10 @@ var car_speed: float = 300.0
 var spawn_point: String = ""
 var is_instructed: bool = false
 
-const plastic_price: float = 15.75
-const glass_price: float = 18.25
-const paper_price: float = 8.67
-const metal_price: float = 23.33
+const plastic_price: float = 10.75
+const glass_price: float = 12.25
+const paper_price: float = 7.67
+const metal_price: float = 16.33
 
 signal inventory_updated
 signal e_btn
