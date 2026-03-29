@@ -37,8 +37,6 @@ func add_item(item_name: String) -> bool:
 	for i in range(0, 15):
 		if inventory[i] == "":
 			inventory[i] = item_name
-			print("Додано ", item_name, " у слот ", i)
 			inventory_updated.emit()
 			return true
-	print("Інвентар повний!")
 	return false

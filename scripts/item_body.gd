@@ -3,9 +3,12 @@ extends StaticBody2D
 var inside: bool = false
 @onready var keyboard_e_2: Sprite2D = $KeyboardE2
 @export var item_name: String = "plastic" 
+@export var variations: Array[Sprite2D]
+
 
 func _ready() -> void:
 	keyboard_e_2.hide()
+	variations.pick_random().show()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact") and inside:

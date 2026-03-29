@@ -4,4 +4,5 @@
 ##### This is my first game, I ever made!
 ###### Credits:
 - Kenney / [www.kenney.nl](www.kenney.nl)
-- Me
+- Me [(CoinGH)](github.com/CoinGH)
+- Recycle items art by Clint Bellanger

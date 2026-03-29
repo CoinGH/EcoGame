@@ -1,38 +1,76 @@
 [gd_scene format=3 uid="uid://452msbeirgut"]
 
 [ext_resource type="Script" uid="uid://onuiegyluw4k" path="res://scripts/item_body.gd" id="1_00qql"]
-[ext_resource type="Texture2D" uid="uid://bc8y2pybnjwun" path="res://resources/items/ph_6777.png" id="2_00qql"]
+[ext_resource type="Texture2D" uid="uid://24mal6vnqw34" path="res://resources/items_pickable/recycle_items.png" id="2_00qql"]
 [ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="3_f85lo"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u1uck"]
+load_path = "res://.godot/imported/recycle_items.png-962bb1b0eba354be8b634e37a52f66c6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f85lo"]
+load_path = "res://.godot/imported/recycle_items.png-962bb1b0eba354be8b634e37a52f66c6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xqjgi"]
+load_path = "res://.godot/imported/recycle_items.png-962bb1b0eba354be8b634e37a52f66c6.ctex"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
-size = Vector2(80, 80)
+size = Vector2(59, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
-size = Vector2(166, 163)
+size = Vector2(128, 138)
 
-[node name="ItemBody" type="StaticBody2D" unique_id=966347275]
+[node name="ItemBody" type="StaticBody2D" unique_id=966347275 node_paths=PackedStringArray("variations")]
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_00qql")
+variations = [NodePath("Ph1"), NodePath("Ph2"), NodePath("Ph3"), NodePath("Ph4")]
 
 [node name="Ph1" type="Sprite2D" parent="." unique_id=1205810571]
+visible = false
 position = Vector2(-1.000001, 4.5657158e-05)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_00qql")
+region_enabled = true
+region_rect = Rect2(2, 17, 15, 45)
+
+[node name="Ph2" type="Sprite2D" parent="." unique_id=536020106]
+visible = false
+position = Vector2(-1.000001, 4.5657158e-05)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("CompressedTexture2D_u1uck")
+region_enabled = true
+region_rect = Rect2(19, 7, 39, 55)
+
+[node name="Ph3" type="Sprite2D" parent="." unique_id=1560954089]
+visible = false
+position = Vector2(-1.000001, 4.5657158e-05)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("CompressedTexture2D_f85lo")
+region_enabled = true
+region_rect = Rect2(60, 18, 36, 44)
+
+[node name="Ph4" type="Sprite2D" parent="." unique_id=1116488046]
+visible = false
+position = Vector2(-1.000001, 4.5657158e-05)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("CompressedTexture2D_xqjgi")
+region_enabled = true
+region_rect = Rect2(373, 17, 28, 45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2060302389]
-position = Vector2(-1, 0)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_ir15t")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=569087318]
 position = Vector2(-701, -198)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=167729973]
-position = Vector2(701, 198)
+position = Vector2(702, 196)
 shape = SubResource("RectangleShape2D_ca42v")
 
 [node name="KeyboardE2" type="Sprite2D" parent="." unique_id=283665572]
 z_index = 5
-position = Vector2(62.00006, -18.999985)
-scale = Vector2(0.35, 0.35)
+position = Vector2(46, -19)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_f85lo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

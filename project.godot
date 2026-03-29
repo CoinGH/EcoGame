@@ -13,7 +13,6 @@ config_version=5
 config/name="EcoGame"
 run/main_scene="res://scenes/GUI/main_menu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="uid://ct7wygle8sxys"
 
 [autoload]
 
@@ -83,6 +82,11 @@ Sprint={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://locale/uk_UA.po")
+locale/translations_pot_files=PackedStringArray("res://scenes/GUI/craft.tscn", "res://scenes/GUI/GameOver.tscn", "res://scenes/GUI/hud.tscn", "res://scenes/GUI/inventory.tscn", "res://scenes/GUI/main_menu.tscn", "res://scenes/GUI/options.tscn", "res://scenes/GUI/pause_menu.tscn", "res://scenes/GUI/shop_menu.tscn", "res://scenes/GUI/win.tscn", "res://scenes/checkpoint_for_sale.tscn")
 
 [physics]
 

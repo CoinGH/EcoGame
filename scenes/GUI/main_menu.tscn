@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://dtsmi2ptvjl5i" path="res://scripts/main_menu.gd" id="1_xm7ak"]
 [ext_resource type="AudioStream" uid="uid://bxcipqer0mu41" path="res://sounds/sfx/kenney_ui_audio/click2.ogg" id="2_h03jd"]
 [ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://fonts/connection_ii/ConnectionII.otf" id="3_gbdx4"]
-[ext_resource type="Texture2D" uid="uid://c8ccm2hvqcqn0" path="res://UI/kenney_emotes-pack/PNG/Vector/Style 5/emote_cash.png" id="4_2mbt4"]
+[ext_resource type="Texture2D" uid="uid://cggkbwh3i354n" path="res://UI/kenney_emotes-pack/PNG/Pixel/Style 5/emote_cash.png" id="4_2mbt4"]
 [ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="5_m1xxq"]
+[ext_resource type="Texture2D" uid="uid://cv88utf0mbv6o" path="res://UI/kenney_emotes-pack/PNG/Pixel/Style 5/emote_question.png" id="6_m1xxq"]
+[ext_resource type="Texture2D" uid="uid://dkuyiaoite8i1" path="res://UI/kenney_emotes-pack/PNG/Pixel/Style 7/emote_swirl.png" id="7_2s2lp"]
+[ext_resource type="Texture2D" uid="uid://c3670gwcfcs06" path="res://UI/kenney_emotes-pack/PNG/Pixel/Style 8/emote_idea.png" id="8_obiyt"]
 
 [node name="Control" type="Control" unique_id=921013919]
 layout_mode = 3
@@ -144,6 +147,21 @@ text = " Controls:
  Tab, I - Inventory
  W,A,S,D or Arrows - Walk
  Shift - Run"
+
+[node name="EmoteQuestion" type="Sprite2D" parent="." unique_id=531295563]
+position = Vector2(56.000046, 850)
+scale = Vector2(5, 5)
+texture = ExtResource("6_m1xxq")
+
+[node name="EmoteSwirl" type="Sprite2D" parent="." unique_id=188693541]
+position = Vector2(1767.0001, 1006.00006)
+scale = Vector2(5, 5)
+texture = ExtResource("7_2s2lp")
+
+[node name="EmoteIdea" type="Sprite2D" parent="." unique_id=1806356335]
+position = Vector2(1194, 506)
+scale = Vector2(6, 6)
+texture = ExtResource("8_obiyt")
 
 [connection signal="pressed" from="VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonSettings" to="." method="_on_button_settings_pressed"]

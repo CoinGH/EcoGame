@@ -1,0 +1,327 @@
+# LANGUAGE translation for EcoGame for the following files:
+# res://scenes/GUI/craft.tscn
+# res://scenes/GUI/GameOver.tscn
+# res://scenes/GUI/hud.tscn
+# res://scenes/GUI/inventory.tscn
+# res://scenes/GUI/main_menu.tscn
+# res://scenes/GUI/options.tscn
+# res://scenes/GUI/pause_menu.tscn
+# res://scenes/GUI/shop_menu.tscn
+# res://scenes/GUI/win.tscn
+# res://scenes/checkpoint_for_sale.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: EcoGame\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: scenes/GUI/craft.tscn
+msgid "Crafting"
+msgstr "Створення"
+
+#: scenes/GUI/craft.tscn
+msgid "Click on the recipe to craft"
+msgstr "Натисни на рецепт щоб створити"
+
+#: scenes/GUI/craft.tscn
+msgid ""
+"Handcrafted Game Console\n"
+"---\n"
+"Ingredients:\n"
+"2 pcs - plastic\n"
+"1 pcs - electronic"
+msgstr ""
+"Ігрова консоль ручної роботи\n"
+"---\n"
+"Компоненти:\n"
+"2 шт. — пластик\n"
+"1 шт. — електроніка"
+
+#: scenes/GUI/craft.tscn
+msgid ""
+"Fruit Salad\n"
+"---\n"
+"Ingredients:\n"
+"2 pcs - fruits\n"
+"1 pcs - sugar"
+msgstr ""
+"Фруктовий салат\n"
+"---\n"
+"Інгредієнти:\n"
+"2 шт. — фрукти\n"
+"1 шт. — цукор"
+
+#: scenes/GUI/craft.tscn
+msgid ""
+"Soup\n"
+"---\n"
+"Ingredients:\n"
+"1 pcs - vegetables\n"
+"1 pcs - salt"
+msgstr ""
+"Суп\n"
+"---\n"
+"Інгредієнти:\n"
+"1 шт. — овочі\n"
+"1 шт. — сіль"
+
+#: scenes/GUI/craft.tscn
+msgid ""
+"Handcrafted Accumulator\n"
+"---\n"
+"Ingredients:\n"
+" \t1 pcs - metal\n"
+" \t1 pcs - electronic"
+msgstr ""
+"Акумулятор ручної роботи\n"
+"---\n"
+"Компоненти:\n"
+"   1 шт. — метал\n"
+"   1 шт. — електроніка"
+
+#: scenes/GUI/craft.tscn
+msgid ""
+"LOCKED\n"
+"---\n"
+"Ingredients:\n"
+" \t█ pcs - ████\n"
+" \t█ pcs - ████"
+msgstr ""
+"ЗАБЛОКОВАНО\n"
+"---\n"
+"Інгредієнти:\n"
+" \t█ шт. - ████\n"
+" \t█ шт. - ████"
+
+#: scenes/GUI/GameOver.tscn scenes/GUI/win.tscn
+msgid "Go Back"
+msgstr "Назад"
+
+#: scenes/GUI/GameOver.tscn
+msgid "Ah shit, here we go again."
+msgstr "Ah shit, here we go again."
+
+#: scenes/GUI/GameOver.tscn
+msgid "! Game Over !"
+msgstr "! Поразка !"
+
+#: scenes/GUI/GameOver.tscn
+msgid ""
+"- Please be careful on the roads!\n"
+"- Сross the road only at pedestrian crossings..."
+msgstr ""
+"- Будьте обережні на дорозі!\n"
+"- Переходьте дорогу лише на пішохідних переходах..."
+
+#: scenes/GUI/hud.tscn
+msgid "0.0 $"
+msgstr "0.0 $"
+
+#: scenes/GUI/inventory.tscn
+msgid ""
+"\n"
+"\n"
+"\n"
+"Inventory\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"Інвентар\n"
+
+#: scenes/GUI/main_menu.tscn
+msgid "EcoGame"
+msgstr "EcoGame"
+
+#: scenes/GUI/main_menu.tscn
+msgid "Play"
+msgstr "Грати"
+
+#: scenes/GUI/main_menu.tscn
+msgid "Settings"
+msgstr "Налаштування"
+
+#: scenes/GUI/main_menu.tscn scenes/GUI/pause_menu.tscn
+msgid "Exit"
+msgstr "Вийти"
+
+#: scenes/GUI/main_menu.tscn
+msgid "© EcoGame 2026. All rights probably reserved."
+msgstr "© EcoGame 2026. All rights probably reserved."
+
+#: scenes/GUI/main_menu.tscn
+msgid ""
+" Controls:\n"
+" E, F - Interact\n"
+" Tab, I - Inventory\n"
+" W,A,S,D or Arrows - Walk\n"
+" Shift - Run"
+msgstr ""
+" Керування:\n"
+" E, F - Взаємодія\n"
+" Tab, I - Інвентар\n"
+" W,A,S,D або Стрілочки - Ходити\n"
+" Shift - Біг"
+
+#: scenes/GUI/options.tscn
+msgid "Options"
+msgstr "Налаштування"
+
+#: scenes/GUI/options.tscn
+msgid "Volume"
+msgstr "Гучність"
+
+#: scenes/GUI/options.tscn
+msgid "V-Sync"
+msgstr "V-Sync"
+
+#: scenes/GUI/options.tscn
+msgid "OFF/ON"
+msgstr "OFF/ON"
+
+#: scenes/GUI/options.tscn
+msgid "Fullscreen"
+msgstr "Повноекранний"
+
+#: scenes/GUI/options.tscn
+msgid "Language"
+msgstr "Мова"
+
+#: scenes/GUI/options.tscn
+msgid "English"
+msgstr "Англійська"
+
+#: scenes/GUI/options.tscn
+msgid "Ukrainian (WIP)"
+msgstr "Українська (WIP)"
+
+#: scenes/GUI/options.tscn
+msgid "Back"
+msgstr "Назад"
+
+#: scenes/GUI/pause_menu.tscn
+msgid "Pause Menu"
+msgstr "Пауза"
+
+#: scenes/GUI/pause_menu.tscn
+msgid "Resume"
+msgstr "Продовжити"
+
+#: scenes/GUI/pause_menu.tscn
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: scenes/GUI/shop_menu.tscn
+msgid "Shop"
+msgstr "Магазин"
+
+#: scenes/GUI/shop_menu.tscn
+msgid "Click on item to buy it"
+msgstr "Натисни на предмет щоб купити"
+
+#: scenes/GUI/shop_menu.tscn
+msgid ""
+"Electronic components.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Price: 36.92 $ pcs"
+msgstr ""
+"Електронні компоненти.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Ціна: 36.92 $ шт."
+
+#: scenes/GUI/shop_menu.tscn
+msgid ""
+"Salt.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Price: 12.44 $ pcs"
+msgstr ""
+"Сіль.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Ціна: 12.44 $ шт."
+
+#: scenes/GUI/shop_menu.tscn
+msgid ""
+"Vegetables.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Price: 15.67 $ pcs"
+msgstr ""
+"Овочі.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Ціна: 15.67 $ шт."
+
+#: scenes/GUI/shop_menu.tscn
+msgid ""
+"Sugar.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Price: 13.13 $ pcs"
+msgstr ""
+"Цукор.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Ціна: 13.13 $ шт."
+
+#: scenes/GUI/shop_menu.tscn
+msgid ""
+"Fruits.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Price: 16.25 $ pcs"
+msgstr ""
+"Фрукти.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Ціна: 16.25 $ шт."
+
+#: scenes/GUI/win.tscn
+msgid "You Win! :)"
+msgstr "Ти переміг! :)"
+
+#: scenes/checkpoint_for_sale.tscn
+msgid "I want to "
+msgstr "I want to "

@@ -8524,6 +8524,33 @@ position = Vector2(1118.0001, 320.01462)
 scale = Vector2(0.06481538, 9.000457)
 texture = SubResource("GradientTexture2D_ru2r1")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2037917980]
+z_index = 5
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 832.0
+offset_top = 49.333347
+offset_right = 1152.0
+offset_bottom = 129.33334
+grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
+color = Color(0, 0, 0, 0.58431375)
+
+[node name="Label" type="Label" parent="." unique_id=997683588]
+z_index = 5
+offset_left = 832.0001
+offset_top = 49.0
+offset_right = 1152.0002
+offset_bottom = 129.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_shadow_color = Color(0.9607843, 0, 0, 0.95686275)
+theme_override_fonts/font = ExtResource("18_aa4hd")
+theme_override_font_sizes/font_size = 65
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="body_entered" from="StaticBody2D2/Area2D" to="StaticBody2D2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="StaticBody2D2/Area2D" to="StaticBody2D2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="TableBody/Area2D" to="TableBody" method="_on_area_2d_body_entered"]

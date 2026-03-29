@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://kumn3y644k5f" path="res://scripts/street.gd" id="1_7vr8w"]
 [ext_resource type="Texture2D" uid="uid://d0kq4axy42d1w" path="res://resources/tilemaps/roguelikeIndoor_transparent.png" id="1_l8dq3"]
 [ext_resource type="PackedScene" uid="uid://oec6h8gxjdmq" path="res://scenes/character_body_2d.tscn" id="1_tr5t1"]
-[ext_resource type="PackedScene" uid="uid://dhmjh4ac47pcj" path="res://scenes/items/item_body.tscn" id="2_scssp"]
+[ext_resource type="PackedScene" uid="uid://dhmjh4ac47pcj" path="res://scenes/items/item_glass.tscn" id="2_scssp"]
 [ext_resource type="Texture2D" uid="uid://di2n85h36yrrv" path="res://resources/tilemaps/tilemap_packed_kenney_roguelike-modern-city.png" id="3_6epoj"]
 [ext_resource type="PackedScene" uid="uid://ojq8aq65n6yg" path="res://scenes/items/item_metal.tscn" id="3_kkqeo"]
 [ext_resource type="PackedScene" uid="uid://8mj85ih0uus0" path="res://scenes/items/item_paper.tscn" id="4_xcar7"]
@@ -3642,12 +3642,19 @@ texture = ExtResource("3_6epoj")
 10:13/0 = 0
 11:13/0 = 0
 12:13/0 = 0
+12:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:13/0 = 0
+13:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:13/0 = 0
+14:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:13/0 = 0
+15:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:13/0 = 0
+16:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:13/0 = 0
+17:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:13/0 = 0
+18:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:13/0 = 0
 20:13/0 = 0
 21:13/0 = 0
@@ -3679,9 +3686,13 @@ texture = ExtResource("3_6epoj")
 10:14/0 = 0
 11:14/0 = 0
 12:14/0 = 0
+12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:14/0 = 0
+13:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:14/0 = 0
+14:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:14/0 = 0
+15:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:14/0 = 0
 17:14/0 = 0
 18:14/0 = 0
@@ -3716,6 +3727,7 @@ texture = ExtResource("3_6epoj")
 10:15/0 = 0
 11:15/0 = 0
 12:15/0 = 0
+12:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:15/0 = 0
 14:15/0 = 0
 15:15/0 = 0
@@ -3753,6 +3765,7 @@ texture = ExtResource("3_6epoj")
 10:16/0 = 0
 11:16/0 = 0
 12:16/0 = 0
+12:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:16/0 = 0
 14:16/0 = 0
 15:16/0 = 0

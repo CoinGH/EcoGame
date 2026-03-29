@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://csbchos031nbu" path="res://sounds/sfx/kenney_ui_audio/switch11.ogg" id="3_vapp5"]
 [ext_resource type="FontFile" uid="uid://cm0whhy4yrgkk" path="res://fonts/connection_ii/ConnectionII.otf" id="4_avxhp"]
 [ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="5_v2l24"]
+[ext_resource type="Texture2D" uid="uid://dr6o3sstdqcui" path="res://UI/kenney_emotes-pack/PNG/Pixel/Style 8/emote_star.png" id="6_3admp"]
 
 [node name="Options" type="Control" unique_id=168706576]
 layout_mode = 3
@@ -163,9 +164,8 @@ selected = 0
 item_count = 2
 popup/item_0/text = "English"
 popup/item_0/id = 0
-popup/item_1/text = "Ukrainian"
+popup/item_1/text = "Ukrainian (WIP)"
 popup/item_1/id = 1
-popup/item_1/disabled = true
 
 [node name="BackButton" type="Button" parent="." unique_id=270803898]
 layout_mode = 1
@@ -181,6 +181,11 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("5_v2l24")
 theme_override_font_sizes/font_size = 32
 text = "Back"
+
+[node name="EmoteStar" type="Sprite2D" parent="." unique_id=806638236]
+position = Vector2(741.00006, 612)
+scale = Vector2(5, 5)
+texture = ExtResource("6_3admp")
 
 [connection signal="value_changed" from="VBoxContainer/HBoxContainer/volume_slider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/vsync_toggle" to="." method="_on_toggle_pressed"]
