@@ -3269,11 +3269,11 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.5137255)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_kvuet"]
 gradient = SubResource("Gradient_dinhu")
 
-[sub_resource type="Gradient" id="Gradient_ssvqc"]
+[sub_resource type="Gradient" id="Gradient_rysoc"]
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.38431373)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_37s47"]
-gradient = SubResource("Gradient_ssvqc")
+gradient = SubResource("Gradient_rysoc")
 
 [node name="Game" type="Node2D" unique_id=80532876]
 y_sort_enabled = true
@@ -3281,7 +3281,7 @@ script = ExtResource("1_p57ef")
 
 [node name="AudioStreamMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1102872468]
 stream = ExtResource("2_rysoc")
-volume_db = -30.0
+volume_db = -40.0
 pitch_scale = 1.05
 autoplay = true
 script = ExtResource("3_ssvqc")

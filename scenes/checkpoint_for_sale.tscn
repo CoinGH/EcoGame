@@ -53,6 +53,7 @@ scale = Vector2(1, 0.4)
 shape = SubResource("CircleShape2D_xam77")
 
 [node name="Label" type="Label" parent="." unique_id=259187956]
+z_index = 5
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
