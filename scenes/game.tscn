@@ -3279,13 +3279,6 @@ gradient = SubResource("Gradient_rysoc")
 y_sort_enabled = true
 script = ExtResource("1_p57ef")
 
-[node name="AudioStreamMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1102872468]
-stream = ExtResource("2_rysoc")
-volume_db = -40.0
-pitch_scale = 1.05
-autoplay = true
-script = ExtResource("3_ssvqc")
-
 [node name="Instruction" type="CanvasLayer" parent="." unique_id=1104169149]
 visible = false
 script = ExtResource("4_264po")
@@ -3325,6 +3318,13 @@ visible = false
 [node name="CharacterBody2D" parent="." unique_id=1145525770 instance=ExtResource("6_1kice")]
 z_index = 1
 position = Vector2(401, 290)
+
+[node name="AudioStreamMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1102872468]
+stream = ExtResource("2_rysoc")
+volume_db = -19.0
+pitch_scale = 1.05
+autoplay = true
+script = ExtResource("3_ssvqc")
 
 [node name="Inventory" parent="." unique_id=1204250517 instance=ExtResource("5_rysoc")]
 

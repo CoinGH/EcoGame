@@ -44,11 +44,13 @@ position = Vector2(0, 10)
 stream = ExtResource("4_4vejd")
 volume_db = -10.0
 pitch_scale = 1.5
+max_polyphony = 2
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1252223072]
 stream = ExtResource("5_ws0vm")
 volume_db = -10.0
 pitch_scale = 1.5
+max_polyphony = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=969037351]
 stream = ExtResource("5_rhr3r")
