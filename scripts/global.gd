@@ -1,5 +1,5 @@
 extends Node
-var money = 357.45
+var money = 0.0
 var health = 100
 signal money_changed(new_value)
 signal health_changed(new_val)
@@ -9,9 +9,9 @@ var is_fullscreen: bool = false
 var is_vsync: bool = false
 var language_index: int = 0
 var inventory = {
-	0: "fruit_salad", 1: "fruit_salad", 2: "handcrafted_game_console", 3: "", 4: "",
-	5: "handcrafted_game_console", 6: "handcrafted_accumulator", 7: "", 8: "", 9: "",
-	10: "soup", 11: "soup", 12: "handcrafted_accumulator", 13: "", 14: ""
+	0: "", 1: "", 2: "", 3: "", 4: "",
+	5: "", 6: "", 7: "", 8: "", 9: "",
+	10: "", 11: "", 12: "", 13: "", 14: ""
 }
 var npc_memory = {}
 var can_move: bool = true
