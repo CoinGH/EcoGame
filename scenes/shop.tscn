@@ -8239,6 +8239,9 @@ separation = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ru2r1")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yuijs"]
+load_path = "res://.godot/imported/keyboard_e.png-fbff755df99896388459b54a10ff0045.ctex"
+
 [sub_resource type="Gradient" id="Gradient_j14q8"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.96862745)
 
@@ -8340,7 +8343,7 @@ tile_map_data = PackedByteArray("AAATAAMAAQAAAAcAAAASAAoAAQABAAYAAAA=")
 tile_set = SubResource("TileSet_lxs01")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1574142183]
-position = Vector2(2, -20)
+position = Vector2(-1, -20)
 anchor_mode = 0
 zoom = Vector2(1.67, 1.67)
 
@@ -8358,6 +8361,15 @@ position = Vector2(-53.54492, 19.377441)
 
 [node name="AudioStreamPlayer2D" parent="DoorBody" index="2" unique_id=1982958045]
 position = Vector2(15.003196, -1.6376191)
+
+[node name="KeyboardE" type="Sprite2D" parent="DoorBody" unique_id=1165507251]
+visible = false
+z_index = 5
+position = Vector2(-175.02222, 11.328077)
+rotation = 1.5707964
+scale = Vector2(0.67, 0.67)
+texture = SubResource("CompressedTexture2D_yuijs")
+flip_h = true
 
 [node name="FromStreetSpawnPoint" type="Marker2D" parent="." unique_id=317825747]
 position = Vector2(512, 601)

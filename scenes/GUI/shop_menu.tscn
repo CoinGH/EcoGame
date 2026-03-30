@@ -4,8 +4,12 @@
 [ext_resource type="Shader" uid="uid://byx52fl1ehps1" path="res://shaders/rgb.gdshader" id="2_xw4en"]
 [ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="3_bq4yc"]
 [ext_resource type="FontFile" uid="uid://bjtyhd1n3mwav" path="res://fonts/montreal/Montreal-Regular.ttf" id="4_lngpu"]
-[ext_resource type="Texture2D" uid="uid://bqs4w6qlndecg" path="res://resources/items/ph_2.png" id="5_hgolc"]
+[ext_resource type="Texture2D" uid="uid://cm0rx46bdt2lq" path="res://resources/items/el_slot.png" id="5_seelk"]
+[ext_resource type="Texture2D" uid="uid://bxtyh5gq5mw6" path="res://resources/items/salt_slot.png" id="6_5m1qe"]
 [ext_resource type="AudioStream" uid="uid://534djcq4o2mt" path="res://sounds/sfx/kenney_ui_audio/mouseclick1.ogg" id="6_xw4en"]
+[ext_resource type="Texture2D" uid="uid://m404qhkeddqv" path="res://resources/items/veg_slot.png" id="7_q6dxu"]
+[ext_resource type="Texture2D" uid="uid://bluuycgfoe8io" path="res://resources/items/sugar_slot.png" id="8_mgyxx"]
+[ext_resource type="Texture2D" uid="uid://bem4vsdw6gojo" path="res://resources/items/fruits_slot.png" id="9_yseiv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_37s47"]
 shader = ExtResource("2_xw4en")
@@ -85,7 +89,7 @@ offset_left = -150.0
 offset_right = 150.0
 offset_bottom = 224.0
 grow_horizontal = 2
-texture = ExtResource("5_hgolc")
+texture = ExtResource("5_seelk")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect" unique_id=1647520562]
@@ -132,7 +136,7 @@ offset_left = -150.0
 offset_right = 150.0
 offset_bottom = 224.0
 grow_horizontal = 2
-texture = ExtResource("5_hgolc")
+texture = ExtResource("6_5m1qe")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect2" unique_id=359911584]
@@ -180,7 +184,7 @@ offset_left = -150.0
 offset_right = 150.0
 offset_bottom = 224.0
 grow_horizontal = 2
-texture = ExtResource("5_hgolc")
+texture = ExtResource("7_q6dxu")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect3" unique_id=8631515]
@@ -228,7 +232,7 @@ offset_left = -150.0
 offset_right = 150.0
 offset_bottom = 224.0
 grow_horizontal = 2
-texture = ExtResource("5_hgolc")
+texture = ExtResource("8_mgyxx")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect4" unique_id=739577707]
@@ -276,7 +280,7 @@ offset_left = -150.0
 offset_right = 150.0
 offset_bottom = 224.0
 grow_horizontal = 2
-texture = ExtResource("5_hgolc")
+texture = ExtResource("9_yseiv")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/ColorRect5" unique_id=796494341]
@@ -310,14 +314,34 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=266985409]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=768816464]
 stream = ExtResource("6_xw4en")
 volume_db = -5.0
 pitch_scale = 2.25
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=393116482]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_right = 450.0
+offset_bottom = 67.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1293053809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 0.72156864)
+theme_override_fonts/font = ExtResource("3_bq4yc")
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="HBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/ColorRect2/Button2" to="." method="_on_button_2_pressed"]

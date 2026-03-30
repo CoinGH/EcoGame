@@ -9,9 +9,9 @@
 [ext_resource type="FontFile" uid="uid://cogj4m8ovvak8" path="res://fonts/montreal/Montreal-Bold.ttf" id="4_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://8yvq10h1l7pi" path="res://scenes/GUI/inventory.tscn" id="5_rysoc"]
 [ext_resource type="PackedScene" uid="uid://oec6h8gxjdmq" path="res://scenes/character_body_2d.tscn" id="6_1kice"]
-[ext_resource type="PackedScene" uid="uid://c5jlppj0ehu3u" path="res://scenes/GUI/shop_menu.tscn" id="10_ir15t"]
 [ext_resource type="PackedScene" uid="uid://c5hg7e40mc56h" path="res://scenes/door_body.tscn" id="11_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bjgpnyk4q6f1u" path="res://scenes/table_body.tscn" id="13_kvuet"]
+[ext_resource type="Texture2D" uid="uid://bevmprhugnyy1" path="res://UI/kenney_input-prompts_1.4.1/Keyboard & Mouse/Double/keyboard_e.png" id="13_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://dxqu4j078lhxw" path="res://scenes/GUI/pause_menu.tscn" id="15_5newe"]
 [ext_resource type="Texture2D" uid="uid://di2n85h36yrrv" path="res://resources/tilemaps/tilemap_packed_kenney_roguelike-modern-city.png" id="15_ssvqc"]
 [ext_resource type="AudioStream" uid="uid://bph2gqv472lw5" path="res://sounds/sfx/kenney_rpg_audio/doorClose_3.ogg" id="16_ca42v"]
@@ -685,7 +685,9 @@ separation = Vector2i(1, 1)
 15:0/0 = 0
 15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:0/0 = 0
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:0/0 = 0
+17:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:0/0 = 0
 19:0/0 = 0
 20:0/0 = 0
@@ -1542,6 +1544,7 @@ margins = Vector2i(0, 16)
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.2590103, -8, -1.2590103, 8, -8, 8)
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.136751, -5.2159023, 3.956892, -5.2159023, 3.5971756, 8, 3.5971756, 8, -3.956892, 8)
 5:7/0 = 0
 5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:7/0 = 0
@@ -1557,6 +1560,7 @@ margins = Vector2i(0, 16)
 2:8/0 = 0
 2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.2590103, -8, -1.2590103, 8, -8, 8)
 3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:8/0 = 0
 5:8/0 = 0
 5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -3331,11 +3335,15 @@ script = ExtResource("3_ssvqc")
 [node name="PauseMenu" parent="." unique_id=1681468942 instance=ExtResource("15_5newe")]
 layer = 11
 
-[node name="Shop" parent="." unique_id=1891207535 instance=ExtResource("10_ir15t")]
-visible = false
-
 [node name="DoorBody" parent="." unique_id=164409045 instance=ExtResource("11_ir15t")]
 position = Vector2(1935, 658)
+
+[node name="KeyboardE" type="Sprite2D" parent="DoorBody" unique_id=393965116]
+visible = false
+z_index = 5
+position = Vector2(-158.3333, 13.333298)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("13_ssvqc")
 
 [node name="TileMapLayerFloor" type="TileMapLayer" parent="." unique_id=528715415]
 scale = Vector2(3, 3)

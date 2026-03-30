@@ -40,3 +40,6 @@ func add_item(item_name: String) -> bool:
 			inventory_updated.emit()
 			return true
 	return false
+
+func _ready() -> void:
+	TranslationServer.set_locale("en")

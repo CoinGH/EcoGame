@@ -4,6 +4,7 @@ var inside: bool = false
 @export var scene: String = ""
 @onready var res_screen: ColorRect = $"../HUD/ResScreen"
 @onready var asp_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var e: Sprite2D = $KeyboardE
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact") and inside:
@@ -17,8 +18,10 @@ func _input(event: InputEvent) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		inside = true
+		e.visible = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		inside = false
+		e.visible = false
