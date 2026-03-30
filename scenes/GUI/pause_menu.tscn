@@ -34,11 +34,13 @@ grow_vertical = 2
 color = Color(0.6255971, 0.6255971, 0.62559694, 0.6039216)
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1829411653]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_right = 178.5
+offset_bottom = 438.0
 grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Label3" type="Label" parent="VBoxContainer2" unique_id=334670319]
 z_index = -1
@@ -80,7 +82,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.16078432)
 theme_override_fonts/font = ExtResource("2_5d2l8")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 48
 text = " "
 metadata/_edit_use_anchors_ = true
 
@@ -101,9 +103,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -73.0
+offset_top = -77.5
 offset_right = 100.0
-offset_bottom = 73.0
+offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 
